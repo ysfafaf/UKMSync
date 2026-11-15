@@ -1,4 +1,4 @@
-// Halaman Scoreboard - Papan Skor Multi-Sport (Sketch Design System)
+// Halaman Scoreboard - Papan Skor Multi-Sport (Sketch Design System - Forest Green Edition)
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { API_BASE_URL } from '../config/api.js';
@@ -8,7 +8,6 @@ import {
   PlayIcon,
   PauseIcon,
   RefreshIcon,
-  PlusIcon,
   MinusIcon,
   ShuttlecockIcon,
   BasketballIcon,
@@ -132,13 +131,13 @@ function ScoreboardPage() {
     return (
       <div className="min-h-screen pb-16">
         {/* Header Sketch */}
-        <div className="bg-[#FAF6EE] border-b-2 border-[#111827] shadow-[0_2px_0px_rgba(17,24,39,0.05)] px-4 pt-10 pb-5 md:pt-6">
+        <div className="bg-[#f4faf3] border-b-2 border-[#10240f] shadow-[0_2px_0px_rgba(16,36,15,0.05)] px-4 pt-10 pb-5 md:pt-6">
           <div className="max-w-xl mx-auto flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#1DAD97] text-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-xl flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 bg-[#418a3b] text-white border-2 border-[#10240f] shadow-[2px_2px_0px_#10240f] rounded-xl flex items-center justify-center shrink-0">
               <ScoreboardIcon className="w-5 h-5" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold font-sketch text-[#111827] tracking-wide">
+              <h1 className="text-2xl font-bold font-sketch text-[#10240f] tracking-wide">
                 Papan Skor Digital
               </h1>
               <p className="text-xs font-mono font-semibold text-slate-600">
@@ -152,7 +151,7 @@ function ScoreboardPage() {
           <div className="card space-y-5">
             {/* Pilihan Olahraga */}
             <div>
-              <label className="block text-xs font-mono font-bold text-[#111827] uppercase tracking-wider mb-2">
+              <label className="block text-xs font-mono font-bold text-[#10240f] uppercase tracking-wider mb-2">
                 Pilih Cabang Olahraga
               </label>
               <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
@@ -164,13 +163,13 @@ function ScoreboardPage() {
                       key={item.name}
                       type="button"
                       onClick={() => setSportType(item.name)}
-                      className={`p-3 rounded-xl border-2 border-[#111827] text-center font-bold text-xs transition-all flex flex-col items-center gap-2 ${
+                      className={`p-3 rounded-xl border-2 border-[#10240f] text-center font-bold text-xs transition-all flex flex-col items-center gap-2 ${
                         selected
-                          ? 'bg-[#1DAD97] text-white shadow-[3px_3px_0px_#111827] translate-x-[1px] translate-y-[1px]'
-                          : 'bg-white text-slate-700 shadow-[2px_2px_0px_#111827] hover:bg-[#F4EDE0]'
+                          ? 'bg-[#418a3b] text-white shadow-[3px_3px_0px_#10240f] translate-x-[1px] translate-y-[1px]'
+                          : 'bg-white text-slate-700 shadow-[2px_2px_0px_#10240f] hover:bg-[#e6f4e4]'
                       }`}
                     >
-                      <Icon className={`w-5 h-5 ${selected ? 'text-white' : 'text-[#1DAD97]'}`} />
+                      <Icon className={`w-5 h-5 ${selected ? 'text-white' : 'text-[#418a3b]'}`} />
                       <span>{item.name}</span>
                     </button>
                   );
@@ -180,7 +179,7 @@ function ScoreboardPage() {
 
             {/* Nama Tim A */}
             <div>
-              <label className="block text-xs font-mono font-bold text-[#111827] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-mono font-bold text-[#10240f] uppercase tracking-wider mb-1.5">
                 Nama Tim A / Pemain 1
               </label>
               <input
@@ -194,7 +193,7 @@ function ScoreboardPage() {
 
             {/* Nama Tim B */}
             <div>
-              <label className="block text-xs font-mono font-bold text-[#111827] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-mono font-bold text-[#10240f] uppercase tracking-wider mb-1.5">
                 Nama Tim B / Pemain 2
               </label>
               <input
@@ -228,7 +227,7 @@ function ScoreboardPage() {
   return (
     <div className="min-h-screen pb-16">
       {/* Header Sticky Papan Skor Sketch */}
-      <div className="sticky top-0 z-40 bg-[#FAF6EE]/95 backdrop-blur-sm border-b-2 border-[#111827] px-4 py-3 shadow-[0_2px_0px_rgba(17,24,39,0.06)]">
+      <div className="sticky top-0 z-40 bg-[#f4faf3]/95 backdrop-blur-sm border-b-2 border-[#10240f] px-4 py-3 shadow-[0_2px_0px_rgba(16,36,15,0.06)]">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <SportBadge sport={sportType} />
@@ -236,11 +235,11 @@ function ScoreboardPage() {
           </div>
 
           {/* Timer Sketch */}
-          <div className="flex items-center gap-2 bg-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] px-3.5 py-1 rounded-full font-mono text-xs font-black text-[#111827]">
+          <div className="flex items-center gap-2 bg-white border-2 border-[#10240f] shadow-[2px_2px_0px_#10240f] px-3.5 py-1 rounded-full font-mono text-xs font-black text-[#10240f]">
             <span>{formatTime(seconds)}</span>
             <button
               onClick={() => setIsRunning(!isRunning)}
-              className="text-slate-600 hover:text-[#1DAD97] transition-colors ml-0.5"
+              className="text-slate-600 hover:text-[#418a3b] transition-colors ml-0.5"
               title={isRunning ? 'Jeda Timer' : 'Mulai Timer'}
             >
               {isRunning ? <PauseIcon className="w-3.5 h-3.5" /> : <PlayIcon className="w-3.5 h-3.5" />}
@@ -258,7 +257,7 @@ function ScoreboardPage() {
 
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-4">
         {saveError && (
-          <div className="p-3 bg-[#FFF1F2] border-2 border-[#DC2626] text-[#DC2626] text-xs font-bold rounded-xl shadow-[2px_2px_0px_#111827]">
+          <div className="p-3 bg-[#FFF1F2] border-2 border-[#DC2626] text-[#DC2626] text-xs font-bold rounded-xl shadow-[2px_2px_0px_#10240f]">
             {saveError}
           </div>
         )}
@@ -268,16 +267,16 @@ function ScoreboardPage() {
           {/* Tim A Panel */}
           <div className="card p-3.5 sm:p-6 text-center flex flex-col justify-between overflow-hidden min-w-0">
             <div className="overflow-hidden max-w-full">
-              <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#E8F7F5] text-[#0F766E] border border-[#111827] shadow-[1px_1px_0px_#111827] uppercase tracking-wider mb-1">
+              <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#e6f4e4] text-[#254423] border border-[#10240f] shadow-[1px_1px_0px_#10240f] uppercase tracking-wider mb-1">
                 Tim A
               </span>
-              <h2 className="text-base sm:text-xl font-bold font-sketch text-[#111827] mt-1 truncate" title={teamAName}>
+              <h2 className="text-base sm:text-xl font-bold font-sketch text-[#10240f] mt-1 truncate" title={teamAName}>
                 {teamAName}
               </h2>
             </div>
 
-            <div className="my-6 sm:my-8 bg-[#FAF6EE] border-2 border-dashed border-[#111827] rounded-2xl py-4 sm:py-6 shadow-[2px_2px_0px_#111827]">
-              <span className="text-6xl sm:text-8xl font-black font-mono text-[#111827] tracking-tight">
+            <div className="my-6 sm:my-8 bg-[#f4faf3] border-2 border-dashed border-[#10240f] rounded-2xl py-4 sm:py-6 shadow-[2px_2px_0px_#10240f]">
+              <span className="text-6xl sm:text-8xl font-black font-mono text-[#10240f] tracking-tight">
                 {scoreA}
               </span>
             </div>
@@ -286,14 +285,14 @@ function ScoreboardPage() {
               <button
                 onClick={() => addScore('A', -1)}
                 disabled={scoreA === 0}
-                className="w-12 h-12 rounded-full bg-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] hover:bg-[#F4EDE0] active:translate-x-0.5 active:translate-y-0.5 text-[#111827] font-bold flex items-center justify-center disabled:opacity-30 transition-all"
+                className="w-12 h-12 rounded-full bg-white border-2 border-[#10240f] shadow-[2px_2px_0px_#10240f] hover:bg-[#e6f4e4] active:translate-x-0.5 active:translate-y-0.5 text-[#10240f] font-bold flex items-center justify-center disabled:opacity-30 transition-all"
                 title="Kurangi 1 poin"
               >
                 <MinusIcon className="w-5 h-5" />
               </button>
               <button
                 onClick={() => addScore('A', 1)}
-                className="flex-1 h-12 rounded-full bg-[#1DAD97] text-white font-mono font-black text-xl border-2 border-[#111827] shadow-[3px_3px_0px_#111827] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none flex items-center justify-center transition-all"
+                className="flex-1 h-12 rounded-full bg-[#418a3b] text-white font-mono font-black text-xl border-2 border-[#10240f] shadow-[3px_3px_0px_#10240f] hover:bg-[#32672e] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none flex items-center justify-center transition-all"
                 title="Tambah 1 poin"
               >
                 +1
@@ -304,16 +303,16 @@ function ScoreboardPage() {
           {/* Tim B Panel */}
           <div className="card p-3.5 sm:p-6 text-center flex flex-col justify-between overflow-hidden min-w-0">
             <div className="overflow-hidden max-w-full">
-              <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#FEF3C7] text-[#92400E] border border-[#111827] shadow-[1px_1px_0px_#111827] uppercase tracking-wider mb-1">
+              <span className="inline-block px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#FEF3C7] text-[#92400E] border border-[#10240f] shadow-[1px_1px_0px_#10240f] uppercase tracking-wider mb-1">
                 Tim B
               </span>
-              <h2 className="text-base sm:text-xl font-bold font-sketch text-[#111827] mt-1 truncate" title={teamBName}>
+              <h2 className="text-base sm:text-xl font-bold font-sketch text-[#10240f] mt-1 truncate" title={teamBName}>
                 {teamBName}
               </h2>
             </div>
 
-            <div className="my-6 sm:my-8 bg-[#FAF6EE] border-2 border-dashed border-[#111827] rounded-2xl py-4 sm:py-6 shadow-[2px_2px_0px_#111827]">
-              <span className="text-6xl sm:text-8xl font-black font-mono text-[#111827] tracking-tight">
+            <div className="my-6 sm:my-8 bg-[#f4faf3] border-2 border-dashed border-[#10240f] rounded-2xl py-4 sm:py-6 shadow-[2px_2px_0px_#10240f]">
+              <span className="text-6xl sm:text-8xl font-black font-mono text-[#10240f] tracking-tight">
                 {scoreB}
               </span>
             </div>
@@ -322,14 +321,14 @@ function ScoreboardPage() {
               <button
                 onClick={() => addScore('B', -1)}
                 disabled={scoreB === 0}
-                className="w-12 h-12 rounded-full bg-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] hover:bg-[#F4EDE0] active:translate-x-0.5 active:translate-y-0.5 text-[#111827] font-bold flex items-center justify-center disabled:opacity-30 transition-all"
+                className="w-12 h-12 rounded-full bg-white border-2 border-[#10240f] shadow-[2px_2px_0px_#10240f] hover:bg-[#e6f4e4] active:translate-x-0.5 active:translate-y-0.5 text-[#10240f] font-bold flex items-center justify-center disabled:opacity-30 transition-all"
                 title="Kurangi 1 poin"
               >
                 <MinusIcon className="w-5 h-5" />
               </button>
               <button
                 onClick={() => addScore('B', 1)}
-                className="flex-1 h-12 rounded-full bg-[#1DAD97] text-white font-mono font-black text-xl border-2 border-[#111827] shadow-[3px_3px_0px_#111827] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none flex items-center justify-center transition-all"
+                className="flex-1 h-12 rounded-full bg-[#418a3b] text-white font-mono font-black text-xl border-2 border-[#10240f] shadow-[3px_3px_0px_#10240f] hover:bg-[#32672e] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none flex items-center justify-center transition-all"
                 title="Tambah 1 poin"
               >
                 +1
