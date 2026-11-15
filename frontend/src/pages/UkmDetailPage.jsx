@@ -1,4 +1,4 @@
-// Halaman Detail UKM - Sketch Design System
+// Halaman Detail UKM - Sketch Design System (Matcha Olive & Spiced Yuzu Edition)
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import useApi from '../hooks/useApi.js';
@@ -27,24 +27,24 @@ const CATEGORY_ICONS = {
 
 const CATEGORY_COLORS = {
   Olahraga: {
-    bg: 'bg-[#E8F7F5] text-[#0F766E]',
-    badge: 'bg-[#E8F7F5] text-[#0F766E] border-[#111827]',
+    bg: 'bg-[#E9EEE4] text-[#274221]',
+    badge: 'bg-[#E9EEE4] text-[#274221] border-[#192118]',
   },
   Teknologi: {
-    bg: 'bg-[#ECFEFF] text-[#0E7490]',
-    badge: 'bg-[#ECFEFF] text-[#0E7490] border-[#111827]',
+    bg: 'bg-[#FEF3C7] text-[#78350F]',
+    badge: 'bg-[#FEF3C7] text-[#78350F] border-[#192118]',
   },
   'Seni & Budaya': {
-    bg: 'bg-[#FFF1F2] text-[#BE123C]',
-    badge: 'bg-[#FFF1F2] text-[#BE123C] border-[#111827]',
+    bg: 'bg-[#F7F8F5] text-[#192118]',
+    badge: 'bg-[#F7F8F5] text-[#192118] border-[#192118]',
   },
   Hiburan: {
-    bg: 'bg-[#FEF3C7] text-[#92400E]',
-    badge: 'bg-[#FEF3C7] text-[#92400E] border-[#111827]',
+    bg: 'bg-[#D6E0CF] text-[#274221]',
+    badge: 'bg-[#D6E0CF] text-[#274221] border-[#192118]',
   },
   Komunitas: {
-    bg: 'bg-[#FFEDD5] text-[#C2410C]',
-    badge: 'bg-[#FFEDD5] text-[#C2410C] border-[#111827]',
+    bg: 'bg-[#FEF3C7] text-[#78350F]',
+    badge: 'bg-[#FEF3C7] text-[#78350F] border-[#192118]',
   },
 };
 
@@ -69,7 +69,7 @@ function UkmDetailPage() {
       {/* State: Error */}
       {error && !loading && (
         <div className="flex flex-col items-center justify-center min-h-[60vh] gap-3 px-4 text-center">
-          <h2 className="text-xl font-bold font-sketch text-[#111827]">Data UKM Tidak Ditemukan</h2>
+          <h2 className="text-xl font-bold font-sketch text-[#192118]">Data UKM Tidak Ditemukan</h2>
           <p className="text-slate-500 text-xs">{error}</p>
           <button onClick={() => navigate('/')} className="btn-primary mt-2">
             <ArrowLeftIcon className="w-4 h-4" />
@@ -84,14 +84,14 @@ function UkmDetailPage() {
           {/* Tombol Navigasi Kembali */}
           <button
             onClick={() => navigate('/')}
-            className="mb-4 inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white text-[#111827] border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-full text-xs font-bold hover:translate-x-0.5 transition-all"
+            className="mb-4 inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white text-[#192118] border-2 border-[#192118] shadow-[2px_2px_0px_#192118] rounded-full text-xs font-bold hover:translate-x-0.5 transition-all"
           >
             <ArrowLeftIcon className="w-4 h-4" />
             <span>Kembali ke Beranda</span>
           </button>
 
           {/* Hero Banner Foto UKM dengan Frame Sketch */}
-          <div className="w-full h-52 sm:h-64 rounded-2xl border-2 border-[#111827] shadow-[3px_3px_0px_#111827] overflow-hidden mb-4 bg-[#FAF6EE] relative">
+          <div className="w-full h-52 sm:h-64 rounded-2xl border-2 border-[#192118] shadow-[3px_3px_0px_#192118] overflow-hidden mb-4 bg-[#F7F8F5] relative">
             <img
               src={ukm.image_url || '/images/sample-ukm.jpg'}
               alt={ukm.name}
@@ -104,7 +104,7 @@ function UkmDetailPage() {
             {/* Lencana Kategori Overlay */}
             <div className="absolute top-3 left-3">
               <span
-                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border-1.5 shadow-[1.5px_1.5px_0px_#111827] backdrop-blur-xs ${colorTheme.badge}`}
+                className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border-1.5 shadow-[1.5px_1.5px_0px_#192118] backdrop-blur-xs ${colorTheme.badge}`}
               >
                 <Icon className="w-3.5 h-3.5" />
                 <span>{ukm.category}</span>
@@ -114,7 +114,7 @@ function UkmDetailPage() {
 
           {/* Banner Hero Identitas UKM */}
           <div className="card p-4 sm:p-5 mb-4 bg-white">
-            <h1 className="text-2xl sm:text-3xl font-bold font-sketch text-[#111827] tracking-wide break-words">
+            <h1 className="text-2xl sm:text-3xl font-bold font-sketch text-[#192118] tracking-wide break-words">
               {ukm.name}
             </h1>
             <p className="text-xs font-mono text-slate-500 font-semibold mt-1">
@@ -126,30 +126,30 @@ function UkmDetailPage() {
           <div className="space-y-3.5">
             {/* Jadwal Latihan */}
             <div className="card flex items-start gap-3 bg-white">
-              <div className="w-10 h-10 bg-[#F4EDE0] border-2 border-[#111827] shadow-[1.5px_1.5px_0px_#111827] rounded-xl flex items-center justify-center shrink-0 text-slate-800">
+              <div className="w-10 h-10 bg-[#E9EEE4] border-2 border-[#192118] shadow-[1.5px_1.5px_0px_#192118] rounded-xl flex items-center justify-center shrink-0 text-slate-800">
                 <CalendarIcon className="w-4 h-4" />
               </div>
               <div className="min-w-0 flex-1">
                 <p className="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider">Jadwal Rutin</p>
-                <p className="text-sm font-bold text-[#111827] mt-0.5 break-words">{ukm.schedule}</p>
+                <p className="text-sm font-bold text-[#192118] mt-0.5 break-words">{ukm.schedule}</p>
               </div>
             </div>
 
             {/* Lokasi */}
             <div className="card flex items-start gap-3 bg-white">
-              <div className="w-10 h-10 bg-[#F4EDE0] border-2 border-[#111827] shadow-[1.5px_1.5px_0px_#111827] rounded-xl flex items-center justify-center shrink-0 text-slate-800">
+              <div className="w-10 h-10 bg-[#E9EEE4] border-2 border-[#192118] shadow-[1.5px_1.5px_0px_#192118] rounded-xl flex items-center justify-center shrink-0 text-slate-800">
                 <MapPinIcon className="w-4 h-4" />
               </div>
               <div className="min-w-0 flex-1">
                 <p className="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider">Lokasi Kegiatan</p>
-                <p className="text-sm font-bold text-[#111827] mt-0.5 break-words">{ukm.location}</p>
+                <p className="text-sm font-bold text-[#192118] mt-0.5 break-words">{ukm.location}</p>
               </div>
             </div>
 
             {/* Deskripsi */}
             <div className="card bg-white">
               <div className="flex items-center gap-2 mb-2 text-slate-700">
-                <BookOpenIcon className="w-4 h-4 text-[#1DAD97]" />
+                <BookOpenIcon className="w-4 h-4 text-[#527D48]" />
                 <p className="text-[11px] font-mono font-bold uppercase tracking-wider">Deskripsi Kegiatan</p>
               </div>
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal break-words">
@@ -158,13 +158,13 @@ function UkmDetailPage() {
             </div>
 
             {/* CTA Komunitas WhatsApp */}
-            <div className="card p-4 sm:p-5 bg-[#F4EDE0] border-2 border-[#111827] shadow-[3px_3px_0px_#111827] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="card p-4 sm:p-5 bg-[#E9EEE4] border-2 border-[#192118] shadow-[3px_3px_0px_#192118] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <div className="w-7 h-7 rounded-lg bg-[#16A34A] text-white flex items-center justify-center shrink-0 border border-[#111827] shadow-[1px_1px_0px_#111827]">
+                  <div className="w-7 h-7 rounded-lg bg-[#16A34A] text-white flex items-center justify-center shrink-0 border border-[#192118] shadow-[1px_1px_0px_#192118]">
                     <WhatsAppIcon className="w-4 h-4" />
                   </div>
-                  <h3 className="font-sketch text-lg sm:text-xl font-bold text-[#111827]">
+                  <h3 className="font-sketch text-lg sm:text-xl font-bold text-[#192118]">
                     Tertarik Bergabung dengan {ukm.name}?
                   </h3>
                 </div>
@@ -177,7 +177,7 @@ function UkmDetailPage() {
                 href="https://chat.whatsapp.com/IQytd9YroCH4g463f2hLoH"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold text-xs py-2.5 px-4 rounded-full border-2 border-[#111827] shadow-[2px_2px_0px_#111827] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] transition-all shrink-0 self-start sm:self-auto"
+                className="inline-flex items-center justify-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold text-xs py-2.5 px-4 rounded-full border-2 border-[#192118] shadow-[2px_2px_0px_#192118] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] transition-all shrink-0 self-start sm:self-auto"
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 <span>Daftar via Komunitas WhatsApp</span>

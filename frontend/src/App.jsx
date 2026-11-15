@@ -24,7 +24,7 @@ function AppLayout() {
   );
 
   return (
-    <div className="min-h-screen bg-[#FAF6EE]">
+    <div className="min-h-screen bg-[#F7F8F5]">
       {/* Navigasi bawah/samping */}
       {!shouldHideNav && <BottomNav />}
 
@@ -55,7 +55,7 @@ function AppLayout() {
             element={
               <div className="flex flex-col items-center justify-center min-h-[70vh] gap-3 text-center px-4">
                 <span className="text-4xl font-mono font-black text-slate-400">404</span>
-                <h1 className="text-2xl font-bold font-sketch text-[#111827]">Halaman Tidak Ditemukan</h1>
+                <h1 className="text-2xl font-bold font-sketch text-[#192118]">Halaman Tidak Ditemukan</h1>
                 <p className="text-slate-600 text-xs font-medium">Halaman yang Anda tuju tidak tersedia atau telah dipindahkan.</p>
                 <a href="/" className="btn-primary mt-2">Kembali ke Beranda</a>
               </div>
