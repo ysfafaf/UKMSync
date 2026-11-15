@@ -52,16 +52,16 @@ function HistoryPage() {
 
   return (
     <div className="min-h-screen pb-16">
-      {/* ─── HEADER HALAMAN SKETCH ─── */}
-      <div className="bg-[#FAF6EE] border-b-2 border-[#111827] shadow-[0_2px_0px_rgba(17,24,39,0.05)] px-4 pt-10 pb-5 md:pt-6">
+      {/* ─── HEADER HALAMAN SKETCH MALIBU ─── */}
+      <div className="bg-[#f2f8fc] border-b-2 border-[#233148] shadow-[0_2px_0px_rgba(35,49,72,0.06)] px-4 pt-10 pb-5 md:pt-6">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#1DAD97] text-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-xl flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 bg-[#4b82c5] text-white border-2 border-[#233148] shadow-[2px_2px_0px_#233148] rounded-xl flex items-center justify-center shrink-0">
                 <HistoryIcon className="w-5 h-5" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold font-sketch text-[#111827] tracking-wide">
+                <h1 className="text-2xl font-bold font-sketch text-[#233148] tracking-wide">
                   Riwayat Pertandingan
                 </h1>
                 <p className="text-xs font-mono font-semibold text-slate-600">
@@ -76,7 +76,7 @@ function HistoryPage() {
                 else refetchMatches();
               }}
               title="Perbarui Data"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-[#111827] shadow-[1.5px_1.5px_0px_#111827] hover:bg-[#F4EDE0] rounded-full text-xs font-bold text-slate-800 transition-all active:translate-x-0.5 active:translate-y-0.5"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-[#233148] shadow-[1.5px_1.5px_0px_#233148] hover:bg-[#e2eef7] rounded-full text-xs font-bold text-[#233148] transition-all active:translate-x-0.5 active:translate-y-0.5"
             >
               <RefreshIcon className="w-3.5 h-3.5" />
               <span>Perbarui</span>
@@ -84,13 +84,13 @@ function HistoryPage() {
           </div>
 
           {/* ─── DUAL-CATEGORY TABS SKETCH ─── */}
-          <div className="grid grid-cols-2 p-1.5 bg-[#F4EDE0] rounded-2xl gap-1.5 border-2 border-[#111827] shadow-[2px_2px_0px_#111827]">
+          <div className="grid grid-cols-2 p-1.5 bg-[#e2eef7] rounded-2xl gap-1.5 border-2 border-[#233148] shadow-[2px_2px_0px_#233148]">
             <button
               type="button"
               onClick={() => handleTabChange('sessions')}
               className={`py-2 px-2.5 sm:px-3 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 sm:gap-2 transition-all min-w-0 ${
                 activeTab === 'sessions'
-                  ? 'bg-[#1DAD97] text-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827]'
+                  ? 'bg-[#4b82c5] text-white border-2 border-[#233148] shadow-[2px_2px_0px_#233148]'
                   : 'text-slate-700 hover:text-slate-900'
               }`}
             >
@@ -98,7 +98,7 @@ function HistoryPage() {
               <span className="font-sketch text-sm sm:text-base truncate">Sesi Match Making</span>
               {sessions && sessions.length > 0 && (
                 <span className={`font-mono text-[10px] px-1.5 py-0.2 rounded-full font-black shrink-0 ${
-                  activeTab === 'sessions' ? 'bg-white text-[#0F766E]' : 'bg-[#FAF6EE] text-slate-800 border border-[#111827]'
+                  activeTab === 'sessions' ? 'bg-white text-[#3a5b93]' : 'bg-[#f2f8fc] text-[#233148] border border-[#233148]'
                 }`}>
                   {sessions.length}
                 </span>
@@ -110,7 +110,7 @@ function HistoryPage() {
               onClick={() => handleTabChange('regular')}
               className={`py-2 px-2.5 sm:px-3 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 sm:gap-2 transition-all min-w-0 ${
                 activeTab === 'regular'
-                  ? 'bg-[#1DAD97] text-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827]'
+                  ? 'bg-[#4b82c5] text-white border-2 border-[#233148] shadow-[2px_2px_0px_#233148]'
                   : 'text-slate-700 hover:text-slate-900'
               }`}
             >
@@ -118,7 +118,7 @@ function HistoryPage() {
               <span className="font-sketch text-sm sm:text-base truncate">Match Reguler</span>
               {matches && matches.length > 0 && (
                 <span className={`font-mono text-[10px] px-1.5 py-0.2 rounded-full font-black shrink-0 ${
-                  activeTab === 'regular' ? 'bg-white text-[#0F766E]' : 'bg-[#FAF6EE] text-slate-800 border border-[#111827]'
+                  activeTab === 'regular' ? 'bg-white text-[#3a5b93]' : 'bg-[#f2f8fc] text-[#233148] border border-[#233148]'
                 }`}>
                   {matches.length}
                 </span>
@@ -133,10 +133,10 @@ function HistoryPage() {
                 <button
                   key={sport}
                   onClick={() => setActiveSportFilter(sport)}
-                  className={`shrink-0 px-3.5 py-1 rounded-full text-xs font-bold border-1.5 border-[#111827] transition-all ${
+                  className={`shrink-0 px-3.5 py-1 rounded-full text-xs font-bold border-1.5 border-[#233148] transition-all ${
                     activeSportFilter === sport
-                      ? 'bg-[#111827] text-white shadow-[2px_2px_0px_#1DAD97]'
-                      : 'bg-white text-slate-700 shadow-[1px_1px_0px_#111827] hover:bg-[#F4EDE0]'
+                      ? 'bg-[#233148] text-white shadow-[2px_2px_0px_#4b82c5]'
+                      : 'bg-white text-slate-700 shadow-[1px_1px_0px_#233148] hover:bg-[#e2eef7]'
                   }`}
                 >
                   {sport}
@@ -167,10 +167,10 @@ function HistoryPage() {
 
             {!loadingSessions && !errorSessions && sessions && sessions.length === 0 && (
               <div className="card text-center py-16">
-                <div className="w-12 h-12 bg-[#E8F7F5] text-[#0F766E] border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-[#e2eef7] text-[#3a5b93] border-2 border-[#233148] shadow-[2px_2px_0px_#233148] rounded-full flex items-center justify-center mx-auto mb-3">
                   <ShuttlecockIcon className="w-6 h-6" />
                 </div>
-                <p className="text-[#111827] font-bold font-sketch text-xl mb-1">Belum Ada Sesi Match Making</p>
+                <p className="text-[#233148] font-bold font-sketch text-xl mb-1">Belum Ada Sesi Match Making</p>
                 <p className="text-slate-600 text-xs max-w-sm mx-auto mb-4 font-medium">
                   Mulai rotasi pemain badminton dan catat seluruh pertandingannya di halaman Match Making.
                 </p>
@@ -220,10 +220,10 @@ function HistoryPage() {
 
             {!loadingMatches && !errorMatches && filteredMatches && filteredMatches.length === 0 && (
               <div className="card text-center py-16">
-                <div className="w-12 h-12 bg-[#F4EDE0] text-slate-800 border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-[#e2eef7] text-[#3a5b93] border-2 border-[#233148] shadow-[2px_2px_0px_#233148] rounded-full flex items-center justify-center mx-auto mb-3">
                   <ScoreboardIcon className="w-6 h-6" />
                 </div>
-                <p className="text-[#111827] font-bold font-sketch text-xl mb-1">
+                <p className="text-[#233148] font-bold font-sketch text-xl mb-1">
                   {activeSportFilter === 'Semua'
                     ? 'Belum Ada Pertandingan Reguler'
                     : `Belum Ada Pertandingan ${activeSportFilter}`}

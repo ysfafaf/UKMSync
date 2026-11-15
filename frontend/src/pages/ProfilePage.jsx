@@ -57,13 +57,13 @@ function ProfilePage() {
   return (
     <div className="min-h-screen pb-16">
       {/* ─── HEADER HALAMAN SKETCH ─── */}
-      <div className="bg-[#FAF6EE] border-b-2 border-[#111827] shadow-[0_2px_0px_rgba(17,24,39,0.05)] px-4 pt-10 pb-5 md:pt-6">
+      <div className="bg-[#f2f8fc] border-b-2 border-[#233148] shadow-[0_2px_0px_rgba(17,24,39,0.05)] px-4 pt-10 pb-5 md:pt-6">
         <div className="max-w-2xl mx-auto flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#1DAD97] text-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-xl flex items-center justify-center shrink-0">
+          <div className="w-10 h-10 bg-[#4b82c5] text-white border-2 border-[#233148] shadow-[2px_2px_0px_#233148] rounded-xl flex items-center justify-center shrink-0">
             <ProfileIcon className="w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold font-sketch text-[#111827] tracking-wide">
+            <h1 className="text-2xl font-bold font-sketch text-[#233148] tracking-wide">
               Informasi Aplikasi
             </h1>
             <p className="text-xs font-mono font-semibold text-slate-600">
@@ -77,11 +77,11 @@ function ProfilePage() {
         {/* ─── BAGIAN HEADER APLIKASI (TOP SECTION) ─── */}
         <div className="card text-center py-7 bg-white">
           {/* Ikon / Logo Minimalis Bertema Olahraga & Manajemen */}
-          <div className="w-16 h-16 bg-[#1DAD97] text-white rounded-2xl border-2 border-[#111827] shadow-[3px_3px_0px_#111827] flex items-center justify-center mx-auto mb-3">
+          <div className="w-16 h-16 bg-[#4b82c5] text-white rounded-2xl border-2 border-[#233148] shadow-[3px_3px_0px_#233148] flex items-center justify-center mx-auto mb-3">
             <ShuttlecockIcon className="w-8 h-8 text-white stroke-[2]" />
           </div>
 
-          <h2 className="text-3xl font-bold font-sketch text-[#111827] tracking-wide">
+          <h2 className="text-3xl font-bold font-sketch text-[#233148] tracking-wide">
             UKMSync
           </h2>
 
@@ -90,7 +90,7 @@ function ProfilePage() {
           </p>
 
           <div className="mt-2.5">
-            <span className="inline-block px-3 py-0.5 rounded-full text-xs font-mono font-bold bg-[#F4EDE0] text-[#111827] border-2 border-[#111827] shadow-[1.5px_1.5px_0px_#111827]">
+            <span className="inline-block px-3 py-0.5 rounded-full text-xs font-mono font-bold bg-[#e2eef7] text-[#233148] border-2 border-[#233148] shadow-[1.5px_1.5px_0px_#233148]">
               v1.0.0
             </span>
           </div>
@@ -98,21 +98,21 @@ function ProfilePage() {
 
         {/* ─── TENTANG APLIKASI (ABOUT THE APP) ─── */}
         <div className="card bg-white">
-          <div className="flex items-center gap-2 mb-2.5 text-[#111827]">
-            <BookOpenIcon className="w-4 h-4 text-[#1DAD97]" />
+          <div className="flex items-center gap-2 mb-2.5 text-[#233148]">
+            <BookOpenIcon className="w-4 h-4 text-[#4b82c5]" />
             <h2 className="text-sm font-bold font-mono tracking-tight uppercase">
               Tentang Aplikasi
             </h2>
           </div>
 
-          <p className="text-xs text-slate-700 leading-relaxed font-normal bg-[#FAF6EE] p-3.5 rounded-xl border-2 border-[#111827] shadow-[2px_2px_0px_#111827]">
+          <p className="text-xs text-slate-700 leading-relaxed font-normal bg-[#f2f8fc] p-3.5 rounded-xl border-2 border-[#233148] shadow-[2px_2px_0px_#233148]">
             Aplikasi berbasis Progressive Web App (PWA) yang dirancang untuk membantu mahasiswa dan pengurus Unit Kegiatan Mahasiswa (UKM) di lingkungan Departemen Teknik Komputer Universitas Diponegoro. Berfungsi sebagai pusat informasi UKM, pengatur rotasi lapangan badminton berbasis sesi (<em>Match Making</em>), serta papan skor digital multi-sport (Badminton, Basket, Voli, Futsal).
           </p>
 
           {/* List Fitur Utama */}
           <div className="mt-4">
-            <h3 className="text-xs font-bold font-mono text-[#111827] uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
-              <TrophyIcon className="w-3.5 h-3.5 text-[#1DAD97]" />
+            <h3 className="text-xs font-bold font-mono text-[#233148] uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+              <TrophyIcon className="w-3.5 h-3.5 text-[#4b82c5]" />
               <span>Fitur Utama</span>
             </h3>
 
@@ -122,13 +122,13 @@ function ProfilePage() {
                 return (
                   <div
                     key={idx}
-                    className="p-3 bg-[#FAF6EE] border-2 border-[#111827] rounded-xl shadow-[2px_2px_0px_#111827] flex items-start gap-2.5"
+                    className="p-3 bg-[#f2f8fc] border-2 border-[#233148] rounded-xl shadow-[2px_2px_0px_#233148] flex items-start gap-2.5"
                   >
-                    <div className="w-7 h-7 rounded-lg bg-white border border-[#111827] shadow-[1px_1px_0px_#111827] flex items-center justify-center shrink-0 mt-0.5 text-[#1DAD97]">
+                    <div className="w-7 h-7 rounded-lg bg-white border border-[#233148] shadow-[1px_1px_0px_#233148] flex items-center justify-center shrink-0 mt-0.5 text-[#4b82c5]">
                       <IconComponent className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold text-[#111827] leading-snug">
+                      <h4 className="text-xs font-bold text-[#233148] leading-snug">
                         {item.title}
                       </h4>
                       <p className="text-[11px] text-slate-600 mt-1 leading-normal font-normal">
@@ -144,14 +144,14 @@ function ProfilePage() {
 
         {/* ─── INFORMASI PENGEMBANG & AKADEMIK (KEY-VALUE) ─── */}
         <div className="card bg-white">
-          <div className="flex items-center gap-2 mb-3 text-[#111827]">
-            <AcademicCapIcon className="w-4 h-4 text-[#1DAD97]" />
+          <div className="flex items-center gap-2 mb-3 text-[#233148]">
+            <AcademicCapIcon className="w-4 h-4 text-[#4b82c5]" />
             <h2 className="text-sm font-bold font-mono tracking-tight uppercase">
               Informasi Pengembang &amp; Akademik
             </h2>
           </div>
 
-          <div className="divide-y-2 divide-dashed divide-[#F4EDE0] border-2 border-[#111827] rounded-xl overflow-hidden shadow-[2px_2px_0px_#111827] bg-[#FAF6EE]">
+          <div className="divide-y-2 divide-dashed divide-[#e2eef7] border-2 border-[#233148] rounded-xl overflow-hidden shadow-[2px_2px_0px_#233148] bg-[#f2f8fc]">
             {DEVELOPER_INFO.map((item, idx) => (
               <div
                 key={idx}
@@ -161,7 +161,7 @@ function ProfilePage() {
                   {item.label}
                 </span>
                 <span
-                  className={`text-xs font-bold text-[#111827] sm:text-right ${
+                  className={`text-xs font-bold text-[#233148] sm:text-right ${
                     item.mono ? 'font-mono' : ''
                   }`}
                 >
@@ -174,8 +174,8 @@ function ProfilePage() {
 
         {/* ─── BAGIAN AKSI / TAUTAN PENDUKUNG (FOOTER UTILITIES) ─── */}
         <div className="card bg-white space-y-3">
-          <div className="flex items-center gap-2 text-[#111827]">
-            <CodeBracketIcon className="w-4 h-4 text-[#1DAD97]" />
+          <div className="flex items-center gap-2 text-[#233148]">
+            <CodeBracketIcon className="w-4 h-4 text-[#4b82c5]" />
             <h2 className="text-sm font-bold font-mono tracking-tight uppercase">
               Tautan &amp; Bantuan
             </h2>
@@ -187,7 +187,7 @@ function ProfilePage() {
               href="https://chat.whatsapp.com/IQytd9YroCH4g463f2hLoH"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold text-xs py-2.5 px-4 rounded-full border-2 border-[#111827] shadow-[2px_2px_0px_#111827] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] transition-all sm:col-span-2 text-center"
+              className="inline-flex items-center justify-center gap-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold text-xs py-2.5 px-4 rounded-full border-2 border-[#233148] shadow-[2px_2px_0px_#233148] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] transition-all sm:col-span-2 text-center"
             >
               <WhatsAppIcon className="w-4 h-4" />
               <span>Daftar / Gabung Komunitas WhatsApp UKM Teknik Komputer</span>
@@ -229,9 +229,9 @@ function ProfilePage() {
       {/* ─── MODAL PANDUAN PENGGUNAAN SKETCH ─── */}
       {showGuideModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
-          <div className="bg-white rounded-3xl border-3 border-[#111827] shadow-[6px_6px_0px_#111827] w-full max-w-lg max-h-[85vh] flex flex-col overflow-hidden animate-scale-up">
+          <div className="bg-white rounded-3xl border-3 border-[#233148] shadow-[6px_6px_0px_#233148] w-full max-w-lg max-h-[85vh] flex flex-col overflow-hidden animate-scale-up">
             {/* Header Modal */}
-            <div className="bg-[#1DAD97] text-white px-5 py-4 flex items-center justify-between border-b-2 border-[#111827]">
+            <div className="bg-[#4b82c5] text-white px-5 py-4 flex items-center justify-between border-b-2 border-[#233148]">
               <div className="flex items-center gap-2">
                 <HelpCircleIcon className="w-5 h-5 text-white" />
                 <h3 className="text-lg font-bold font-sketch tracking-wide">
@@ -242,7 +242,7 @@ function ProfilePage() {
               <button
                 type="button"
                 onClick={() => setShowGuideModal(false)}
-                className="w-7 h-7 rounded-lg bg-white hover:bg-[#F4EDE0] text-[#111827] border border-[#111827] shadow-[1px_1px_0px_#111827] flex items-center justify-center transition-all"
+                className="w-7 h-7 rounded-lg bg-white hover:bg-[#e2eef7] text-[#233148] border border-[#233148] shadow-[1px_1px_0px_#233148] flex items-center justify-center transition-all"
                 aria-label="Tutup"
               >
                 <CloseIcon className="w-4 h-4" />
@@ -250,12 +250,12 @@ function ProfilePage() {
             </div>
 
             {/* Konten Modal */}
-            <div className="p-5 overflow-y-auto space-y-4 bg-[#FAF6EE] text-xs">
+            <div className="p-5 overflow-y-auto space-y-4 bg-[#f2f8fc] text-xs">
               {/* Panduan 1: Match Making Badminton */}
-              <div className="bg-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-2xl p-4">
-                <div className="flex items-center gap-2 mb-2 font-bold text-[#1DAD97]">
+              <div className="bg-white border-2 border-[#233148] shadow-[2px_2px_0px_#233148] rounded-2xl p-4">
+                <div className="flex items-center gap-2 mb-2 font-bold text-[#4b82c5]">
                   <ShuttlecockIcon className="w-4 h-4" />
-                  <h4 className="text-sm font-bold text-[#111827]">
+                  <h4 className="text-sm font-bold text-[#233148]">
                     1. Mengatur Sesi Match Making Badminton
                   </h4>
                 </div>
@@ -270,10 +270,10 @@ function ProfilePage() {
               </div>
 
               {/* Panduan 2: Scoreboard Multi-Sport */}
-              <div className="bg-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-2xl p-4">
-                <div className="flex items-center gap-2 mb-2 font-bold text-[#1DAD97]">
+              <div className="bg-white border-2 border-[#233148] shadow-[2px_2px_0px_#233148] rounded-2xl p-4">
+                <div className="flex items-center gap-2 mb-2 font-bold text-[#4b82c5]">
                   <ScoreboardIcon className="w-4 h-4" />
-                  <h4 className="text-sm font-bold text-[#111827]">
+                  <h4 className="text-sm font-bold text-[#233148]">
                     2. Papan Skor Digital Multi-Sport (Mandiri)
                   </h4>
                 </div>
@@ -288,10 +288,10 @@ function ProfilePage() {
               </div>
 
               {/* Panduan 3: Membaca Riwayat */}
-              <div className="bg-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-2xl p-4">
-                <div className="flex items-center gap-2 mb-2 font-bold text-[#1DAD97]">
+              <div className="bg-white border-2 border-[#233148] shadow-[2px_2px_0px_#233148] rounded-2xl p-4">
+                <div className="flex items-center gap-2 mb-2 font-bold text-[#4b82c5]">
                   <HistoryIcon className="w-4 h-4" />
-                  <h4 className="text-sm font-bold text-[#111827]">
+                  <h4 className="text-sm font-bold text-[#233148]">
                     3. Membuka Riwayat Pertandingan
                   </h4>
                 </div>
@@ -306,7 +306,7 @@ function ProfilePage() {
             </div>
 
             {/* Footer Modal */}
-            <div className="border-t-2 border-[#111827] px-5 py-3 bg-white flex justify-end">
+            <div className="border-t-2 border-[#233148] px-5 py-3 bg-white flex justify-end">
               <button
                 type="button"
                 onClick={() => setShowGuideModal(false)}
