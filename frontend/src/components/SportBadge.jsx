@@ -1,4 +1,4 @@
-// Komponen badge untuk jenis olahraga - Sketch Design System
+// Komponen badge untuk jenis olahraga - Sketch Design System (Matcha Olive & Spiced Yuzu Edition)
 import React from 'react';
 import {
   ShuttlecockIcon,
@@ -10,26 +10,26 @@ import {
 
 const SPORT_CONFIG = {
   Badminton: {
-    badgeClass: 'bg-[#E8F7F5] text-[#0F766E] border-[#111827]',
+    badgeClass: 'bg-[#E9EEE4] text-[#274221] border-[#192118]',
     icon: ShuttlecockIcon,
   },
   Basket: {
-    badgeClass: 'bg-[#FEF3C7] text-[#92400E] border-[#111827]',
+    badgeClass: 'bg-[#FEF3C7] text-[#78350F] border-[#192118]',
     icon: BasketballIcon,
   },
   Voli: {
-    badgeClass: 'bg-[#DCFCE7] text-[#166534] border-[#111827]',
+    badgeClass: 'bg-[#D6E0CF] text-[#274221] border-[#192118]',
     icon: VolleyballIcon,
   },
   Futsal: {
-    badgeClass: 'bg-[#F3E8FF] text-[#6B21A8] border-[#111827]',
+    badgeClass: 'bg-[#F7F8F5] text-[#192118] border-[#192118]',
     icon: SoccerIcon,
   },
 };
 
 function SportBadge({ sport, className = '', showIcon = true }) {
   const config = SPORT_CONFIG[sport] || {
-    badgeClass: 'bg-[#F4EDE0] text-slate-800 border-[#111827]',
+    badgeClass: 'bg-[#E9EEE4] text-[#192118] border-[#192118]',
     icon: TrophyIcon,
   };
 
@@ -37,7 +37,7 @@ function SportBadge({ sport, className = '', showIcon = true }) {
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold border-1.5 shadow-[1.5px_1.5px_0px_#111827] shrink-0 ${config.badgeClass} ${className}`}
+      className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold border-1.5 shadow-[1.5px_1.5px_0px_#192118] shrink-0 ${config.badgeClass} ${className}`}
     >
       {showIcon && <Icon className="w-3.5 h-3.5" />}
       <span>{sport}</span>
