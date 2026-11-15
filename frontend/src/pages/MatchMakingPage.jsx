@@ -326,13 +326,13 @@ function MatchMakingPage() {
       {!isSessionActive ? (
         <div>
           {/* Header Sketch */}
-          <div className="bg-[#FAF6EE] border-b-2 border-[#111827] shadow-[0_2px_0px_rgba(17,24,39,0.05)] px-4 pt-10 pb-5 md:pt-6">
+          <div className="bg-[#F7F8F5] border-b-2 border-[#192118] shadow-[0_2px_0px_rgba(17,24,39,0.05)] px-4 pt-10 pb-5 md:pt-6">
             <div className="max-w-2xl mx-auto flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#1DAD97] text-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-xl flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 bg-[#527D48] text-white border-2 border-[#192118] shadow-[2px_2px_0px_#192118] rounded-xl flex items-center justify-center shrink-0">
                 <MatchMakingIcon className="w-5 h-5" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold font-sketch text-[#111827] tracking-wide">
+                <h1 className="text-2xl font-bold font-sketch text-[#192118] tracking-wide">
                   Match Making Badminton
                 </h1>
                 <p className="text-xs font-mono font-semibold text-slate-600">
@@ -373,10 +373,10 @@ function MatchMakingPage() {
                   <button
                     type="button"
                     onClick={() => setGameFormat('Double')}
-                    className={`py-3 px-4 rounded-xl border-2 border-[#111827] text-sm font-bold flex flex-col items-center gap-0.5 transition-all ${
+                    className={`py-3 px-4 rounded-xl border-2 border-[#192118] text-sm font-bold flex flex-col items-center gap-0.5 transition-all ${
                       gameFormat === 'Double'
-                        ? 'bg-[#1DAD97] text-white shadow-[3px_3px_0px_#111827] translate-x-[1px] translate-y-[1px]'
-                        : 'bg-white text-slate-700 shadow-[2px_2px_0px_#111827] hover:bg-[#F4EDE0]'
+                        ? 'bg-[#527D48] text-white shadow-[3px_3px_0px_#192118] translate-x-[1px] translate-y-[1px]'
+                        : 'bg-white text-slate-700 shadow-[2px_2px_0px_#192118] hover:bg-[#E9EEE4]'
                     }`}
                   >
                     <span className="font-sketch text-lg">Ganda (Double)</span>
@@ -388,10 +388,10 @@ function MatchMakingPage() {
                   <button
                     type="button"
                     onClick={() => setGameFormat('Single')}
-                    className={`py-3 px-4 rounded-xl border-2 border-[#111827] text-sm font-bold flex flex-col items-center gap-0.5 transition-all ${
+                    className={`py-3 px-4 rounded-xl border-2 border-[#192118] text-sm font-bold flex flex-col items-center gap-0.5 transition-all ${
                       gameFormat === 'Single'
-                        ? 'bg-[#1DAD97] text-white shadow-[3px_3px_0px_#111827] translate-x-[1px] translate-y-[1px]'
-                        : 'bg-white text-slate-700 shadow-[2px_2px_0px_#111827] hover:bg-[#F4EDE0]'
+                        ? 'bg-[#527D48] text-white shadow-[3px_3px_0px_#192118] translate-x-[1px] translate-y-[1px]'
+                        : 'bg-white text-slate-700 shadow-[2px_2px_0px_#192118] hover:bg-[#E9EEE4]'
                     }`}
                   >
                     <span className="font-sketch text-lg">Tunggal (Single)</span>
@@ -417,7 +417,7 @@ function MatchMakingPage() {
                     className="input-field w-24 text-center font-mono font-black text-lg"
                   />
                   <span className="text-xs text-slate-600 font-medium">
-                    Kapasitas minimum: <strong className="text-[#111827]">{numCourts * (gameFormat === 'Double' ? 4 : 2)} pemain</strong>
+                    Kapasitas minimum: <strong className="text-[#192118]">{numCourts * (gameFormat === 'Double' ? 4 : 2)} pemain</strong>
                   </span>
                 </div>
               </div>
@@ -428,7 +428,7 @@ function MatchMakingPage() {
                   <label className="block text-xs font-mono font-bold uppercase tracking-wider text-slate-700">
                     Daftar Nama Pemain <span className="text-[10px] lowercase font-normal text-slate-500">(1 baris per pemain)</span>
                   </label>
-                  <span className="text-xs font-mono font-bold bg-[#F4EDE0] border border-[#111827] px-2 py-0.2 rounded-full shadow-[1px_1px_0px_#111827]">
+                  <span className="text-xs font-mono font-bold bg-[#FEF3C7] text-[#78350F] border border-[#192118] px-2 py-0.2 rounded-full shadow-[1px_1px_0px_#192118]">
                     {playerInput.split('\n').filter((n) => n.trim().length > 0).length} Terdata
                   </span>
                 </div>
@@ -447,14 +447,14 @@ function MatchMakingPage() {
                   <button
                     type="button"
                     onClick={() => handleUseSample(SAMPLE_PLAYERS_8)}
-                    className="text-xs px-3 py-1 bg-white border border-[#111827] hover:bg-[#F4EDE0] text-slate-800 font-bold rounded-full shadow-[1px_1px_0px_#111827] transition-all"
+                    className="text-xs px-3 py-1 bg-white border border-[#192118] hover:bg-[#E9EEE4] text-slate-800 font-bold rounded-full shadow-[1px_1px_0px_#192118] transition-all"
                   >
                     + 8 Pemain
                   </button>
                   <button
                     type="button"
                     onClick={() => handleUseSample(SAMPLE_PLAYERS_4)}
-                    className="text-xs px-3 py-1 bg-white border border-[#111827] hover:bg-[#F4EDE0] text-slate-800 font-bold rounded-full shadow-[1px_1px_0px_#111827] transition-all"
+                    className="text-xs px-3 py-1 bg-white border border-[#192118] hover:bg-[#E9EEE4] text-slate-800 font-bold rounded-full shadow-[1px_1px_0px_#192118] transition-all"
                   >
                     + 4 Pemain
                   </button>
@@ -475,7 +475,7 @@ function MatchMakingPage() {
                 <button
                   type="button"
                   onClick={handleStartSession}
-                  className="w-full btn-primary py-3.5 text-base font-bold shadow-[4px_4px_0px_#111827]"
+                  className="w-full btn-primary py-3.5 text-base font-bold shadow-[4px_4px_0px_#192118]"
                 >
                   <ShuttlecockIcon className="w-4 h-4" />
                   <span className="font-sketch text-lg">Mulai Sesi & Susun Pertandingan</span>
@@ -488,19 +488,19 @@ function MatchMakingPage() {
         /* ─── TAMPILAN 2: SESI AKTIF SKETCH ─── */
         <div>
           {/* Header Sticky Sesi Aktif */}
-          <div className="sticky top-0 z-40 bg-[#FAF6EE]/95 backdrop-blur-sm border-b-2 border-[#111827] px-4 py-3 shadow-[0_2px_0px_rgba(17,24,39,0.06)]">
+          <div className="sticky top-0 z-40 bg-[#F7F8F5]/95 backdrop-blur-sm border-b-2 border-[#192118] px-4 py-3 shadow-[0_2px_0px_rgba(17,24,39,0.06)]">
             <div className="max-w-3xl mx-auto flex items-center justify-between gap-2">
               <div className="flex items-center gap-2.5">
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1DAD97] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#1DAD97]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#527D48] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#527D48]"></span>
                 </span>
                 <div>
-                  <h2 className="text-sm font-bold font-sketch text-[#111827] truncate max-w-[150px] sm:max-w-xs text-base">
+                  <h2 className="text-sm font-bold font-sketch text-[#192118] truncate max-w-[150px] sm:max-w-xs text-base">
                     {sessionName}
                   </h2>
                   <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-600">
-                    <span className="text-[#0F766E] bg-[#E8F7F5] border border-[#111827] px-2 py-0.2 rounded shadow-[1px_1px_0px_#111827]">
+                    <span className="text-[#274221] bg-[#E9EEE4] border border-[#192118] px-2 py-0.2 rounded shadow-[1px_1px_0px_#192118]">
                       {formatTimer(elapsedSeconds)}
                     </span>
                     <span>• {numCourts} Lapangan</span>
@@ -517,7 +517,7 @@ function MatchMakingPage() {
                 </button>
                 <button
                   onClick={() => setShowEndModal(true)}
-                  className="btn-danger py-1.5 px-3.5 text-xs font-bold shadow-[2px_2px_0px_#111827]"
+                  className="btn-danger py-1.5 px-3.5 text-xs font-bold shadow-[2px_2px_0px_#192118]"
                 >
                   <CheckIcon className="w-3.5 h-3.5" />
                   <span>Akhiri Sesi</span>
@@ -530,17 +530,17 @@ function MatchMakingPage() {
             {/* Status Sesi & Kemajuan */}
             <div className="card p-3.5 bg-white">
               <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                <div className="p-2.5 bg-[#F4EDE0] border border-[#111827] rounded-xl shadow-[1px_1px_0px_#111827]">
+                <div className="p-2.5 bg-[#E9EEE4] border border-[#192118] rounded-xl shadow-[1px_1px_0px_#192118]">
                   <span className="text-[10px] text-slate-600 block uppercase font-bold">Pemain</span>
                   <span className="font-black font-mono text-slate-900">{allSessionPlayers.length} Orang</span>
                 </div>
-                <div className="p-2.5 bg-[#F4EDE0] border border-[#111827] rounded-xl shadow-[1px_1px_0px_#111827]">
+                <div className="p-2.5 bg-[#E9EEE4] border border-[#192118] rounded-xl shadow-[1px_1px_0px_#192118]">
                   <span className="text-[10px] text-slate-600 block uppercase font-bold">Format</span>
-                  <span className="font-bold text-[#1DAD97]">
+                  <span className="font-bold text-[#527D48]">
                     {gameFormat === 'Double' ? 'Ganda (2v2)' : 'Tunggal (1v1)'}
                   </span>
                 </div>
-                <div className="p-2.5 bg-[#F4EDE0] border border-[#111827] rounded-xl shadow-[1px_1px_0px_#111827]">
+                <div className="p-2.5 bg-[#E9EEE4] border border-[#192118] rounded-xl shadow-[1px_1px_0px_#192118]">
                   <span className="text-[10px] text-slate-600 block uppercase font-bold">Progres</span>
                   <span className="font-black font-mono text-[#16A34A]">
                     {finishedMatchesCount}/{matches.length} Selesai
@@ -551,7 +551,7 @@ function MatchMakingPage() {
 
             {/* Pemain Istirahat / Menunggu Giliran (Bench) */}
             {restingPlayers.length > 0 && (
-              <div className="bg-[#FEF3C7] border-2 border-[#111827] rounded-2xl p-4 shadow-[3px_3px_0px_#111827]">
+              <div className="bg-[#FEF3C7] border-2 border-[#192118] rounded-2xl p-4 shadow-[3px_3px_0px_#192118]">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-xs font-bold text-[#92400E] flex items-center gap-1.5 uppercase tracking-wider">
                     <ClockIcon className="w-3.5 h-3.5 text-[#92400E]" />
@@ -565,7 +565,7 @@ function MatchMakingPage() {
                   {restingPlayers.map((player, idx) => (
                     <span
                       key={idx}
-                      className="px-2.5 py-0.5 bg-white border border-[#111827] text-[#92400E] text-xs rounded-full font-bold flex items-center gap-1.5 shadow-[1px_1px_0px_#111827]"
+                      className="px-2.5 py-0.5 bg-white border border-[#192118] text-[#92400E] text-xs rounded-full font-bold flex items-center gap-1.5 shadow-[1px_1px_0px_#192118]"
                     >
                       <span>{player}</span>
                       <span className="text-[10px] font-mono text-slate-500">
@@ -579,13 +579,13 @@ function MatchMakingPage() {
 
             {/* Header Daftar Pertandingan */}
             <div className="flex items-center justify-between pt-1">
-              <h2 className="text-xl font-bold font-sketch text-[#111827]">
+              <h2 className="text-xl font-bold font-sketch text-[#192118]">
                 Daftar Pertandingan Sesi ({matches.length})
               </h2>
 
               <button
                 onClick={handleAddNextRound}
-                className="btn-secondary py-1.5 px-3.5 text-xs font-bold shadow-[2px_2px_0px_#111827]"
+                className="btn-secondary py-1.5 px-3.5 text-xs font-bold shadow-[2px_2px_0px_#192118]"
               >
                 <PlusIcon className="w-3.5 h-3.5 text-slate-800" />
                 <span>Tambah Babak / Rotasi</span>
@@ -607,19 +607,19 @@ function MatchMakingPage() {
                     }`}
                   >
                     {/* Header Match */}
-                    <div className="bg-[#FAF6EE] border-b-2 border-[#111827] px-4 py-2 flex items-center justify-between text-xs">
+                    <div className="bg-[#F7F8F5] border-b-2 border-[#192118] px-4 py-2 flex items-center justify-between text-xs">
                       <div className="flex items-center gap-2">
-                        <span className="font-mono font-bold text-[#0F766E] bg-[#E8F7F5] border border-[#111827] px-2 py-0.5 rounded shadow-[1px_1px_0px_#111827]">
+                        <span className="font-mono font-bold text-[#274221] bg-[#E9EEE4] border border-[#192118] px-2 py-0.5 rounded shadow-[1px_1px_0px_#192118]">
                           Match #{match.match_number}
                         </span>
-                        <span className="font-mono text-slate-800 bg-white border border-[#111827] px-2 py-0.5 rounded font-bold">
+                        <span className="font-mono text-slate-800 bg-white border border-[#192118] px-2 py-0.5 rounded font-bold">
                           Lapangan {match.court_number}
                         </span>
                       </div>
 
                       <div className="flex items-center gap-2">
                         <span
-                          className={`px-2 py-0.5 rounded-full text-[11px] font-bold border border-[#111827] ${
+                          className={`px-2 py-0.5 rounded-full text-[11px] font-bold border border-[#192118] ${
                             isFinished
                               ? 'bg-[#DCFCE7] text-[#166534]'
                               : 'bg-[#FEF3C7] text-[#92400E] animate-pulse'
@@ -629,7 +629,7 @@ function MatchMakingPage() {
                         </span>
                         <button
                           onClick={() => setActiveModalMatch(match)}
-                          className="text-slate-600 hover:text-[#1DAD97] p-1 font-bold"
+                          className="text-slate-600 hover:text-[#527D48] p-1 font-bold"
                           title="Tampilan Penuh"
                         >
                           <ExpandIcon className="w-3.5 h-3.5" />
@@ -642,20 +642,20 @@ function MatchMakingPage() {
                       <div className="grid grid-cols-2 gap-3 items-center">
                         {/* Tim A */}
                         <div
-                          className={`p-3 rounded-2xl border-2 border-[#111827] shadow-[2px_2px_0px_#111827] text-center transition-all overflow-hidden min-w-0 ${
-                            teamAWon ? 'bg-[#E8F7F5]' : 'bg-[#FAF6EE]'
+                          className={`p-3 rounded-2xl border-2 border-[#192118] shadow-[2px_2px_0px_#192118] text-center transition-all overflow-hidden min-w-0 ${
+                            teamAWon ? 'bg-[#E9EEE4]' : 'bg-[#F7F8F5]'
                           }`}
                         >
                           <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider block">
                             Tim A
                           </span>
-                          <p className="text-sm font-bold text-[#111827] truncate mt-0.5" title={match.team_a_name}>
+                          <p className="text-sm font-bold text-[#192118] truncate mt-0.5" title={match.team_a_name}>
                             {match.team_a_name}
                           </p>
 
                           {/* Angka Skor Tim A */}
                           <div className="my-2">
-                            <span className="text-3xl sm:text-4xl font-black font-mono text-[#111827]">
+                            <span className="text-3xl sm:text-4xl font-black font-mono text-[#192118]">
                               {match.score_a}
                             </span>
                           </div>
@@ -666,14 +666,14 @@ function MatchMakingPage() {
                               type="button"
                               onClick={() => updateScore(match.id, 'A', -1)}
                               disabled={match.score_a === 0}
-                              className="w-8 h-8 rounded-lg bg-white border-2 border-[#111827] shadow-[1.5px_1.5px_0px_#111827] hover:bg-[#F4EDE0] text-slate-800 font-bold flex items-center justify-center disabled:opacity-30 transition-all active:translate-x-0.5 active:translate-y-0.5"
+                              className="w-8 h-8 rounded-lg bg-white border-2 border-[#192118] shadow-[1.5px_1.5px_0px_#192118] hover:bg-[#E9EEE4] text-slate-800 font-bold flex items-center justify-center disabled:opacity-30 transition-all active:translate-x-0.5 active:translate-y-0.5"
                             >
                               <MinusIcon className="w-3.5 h-3.5" />
                             </button>
                             <button
                               type="button"
                               onClick={() => updateScore(match.id, 'A', 1)}
-                              className="w-12 h-8 rounded-lg bg-[#1DAD97] hover:bg-[#148B79] text-white font-black text-xs border-2 border-[#111827] shadow-[2px_2px_0px_#111827] flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5"
+                              className="w-12 h-8 rounded-lg bg-[#527D48] hover:bg-[#3D6135] text-white font-black text-xs border-2 border-[#192118] shadow-[2px_2px_0px_#192118] flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5"
                             >
                               +1
                             </button>
@@ -682,20 +682,20 @@ function MatchMakingPage() {
 
                         {/* Tim B */}
                         <div
-                          className={`p-3 rounded-2xl border-2 border-[#111827] shadow-[2px_2px_0px_#111827] text-center transition-all overflow-hidden min-w-0 ${
-                            teamBWon ? 'bg-[#E8F7F5]' : 'bg-[#FAF6EE]'
+                          className={`p-3 rounded-2xl border-2 border-[#192118] shadow-[2px_2px_0px_#192118] text-center transition-all overflow-hidden min-w-0 ${
+                            teamBWon ? 'bg-[#E9EEE4]' : 'bg-[#F7F8F5]'
                           }`}
                         >
                           <span className="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider block">
                             Tim B
                           </span>
-                          <p className="text-sm font-bold text-[#111827] truncate mt-0.5" title={match.team_b_name}>
+                          <p className="text-sm font-bold text-[#192118] truncate mt-0.5" title={match.team_b_name}>
                             {match.team_b_name}
                           </p>
 
                           {/* Angka Skor Tim B */}
                           <div className="my-2">
-                            <span className="text-3xl sm:text-4xl font-black font-mono text-[#111827]">
+                            <span className="text-3xl sm:text-4xl font-black font-mono text-[#192118]">
                               {match.score_b}
                             </span>
                           </div>
@@ -706,14 +706,14 @@ function MatchMakingPage() {
                               type="button"
                               onClick={() => updateScore(match.id, 'B', -1)}
                               disabled={match.score_b === 0}
-                              className="w-8 h-8 rounded-lg bg-white border-2 border-[#111827] shadow-[1.5px_1.5px_0px_#111827] hover:bg-[#F4EDE0] text-slate-800 font-bold flex items-center justify-center disabled:opacity-30 transition-all active:translate-x-0.5 active:translate-y-0.5"
+                              className="w-8 h-8 rounded-lg bg-white border-2 border-[#192118] shadow-[1.5px_1.5px_0px_#192118] hover:bg-[#E9EEE4] text-slate-800 font-bold flex items-center justify-center disabled:opacity-30 transition-all active:translate-x-0.5 active:translate-y-0.5"
                             >
                               <MinusIcon className="w-3.5 h-3.5" />
                             </button>
                             <button
                               type="button"
                               onClick={() => updateScore(match.id, 'B', 1)}
-                              className="w-12 h-8 rounded-lg bg-[#1DAD97] hover:bg-[#148B79] text-white font-black text-xs border-2 border-[#111827] shadow-[2px_2px_0px_#111827] flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5"
+                              className="w-12 h-8 rounded-lg bg-[#527D48] hover:bg-[#3D6135] text-white font-black text-xs border-2 border-[#192118] shadow-[2px_2px_0px_#192118] flex items-center justify-center transition-all active:translate-x-0.5 active:translate-y-0.5"
                             >
                               +1
                             </button>
@@ -722,11 +722,11 @@ function MatchMakingPage() {
                       </div>
 
                       {/* Bar Aksi Bawah */}
-                      <div className="mt-3.5 pt-3 border-t-2 border-dashed border-[#F4EDE0] flex items-center justify-between">
+                      <div className="mt-3.5 pt-3 border-t-2 border-dashed border-[#E9EEE4] flex items-center justify-between">
                         <button
                           type="button"
                           onClick={() => setActiveModalMatch(match)}
-                          className="text-xs font-bold text-[#1DAD97] hover:underline flex items-center gap-1"
+                          className="text-xs font-bold text-[#527D48] hover:underline flex items-center gap-1"
                         >
                           <ExpandIcon className="w-3.5 h-3.5" />
                           <span>Papan Skor Penuh</span>
@@ -735,9 +735,9 @@ function MatchMakingPage() {
                         <button
                           type="button"
                           onClick={() => toggleMatchStatus(match.id)}
-                          className={`px-3.5 py-1.5 rounded-full text-xs font-bold border-2 border-[#111827] shadow-[2px_2px_0px_#111827] transition-all active:translate-x-0.5 active:translate-y-0.5 ${
+                          className={`px-3.5 py-1.5 rounded-full text-xs font-bold border-2 border-[#192118] shadow-[2px_2px_0px_#192118] transition-all active:translate-x-0.5 active:translate-y-0.5 ${
                             isFinished
-                              ? 'bg-white text-slate-700 hover:bg-[#F4EDE0]'
+                              ? 'bg-white text-slate-700 hover:bg-[#E9EEE4]'
                               : 'bg-[#16A34A] text-white hover:bg-[#15803D]'
                           }`}
                         >
@@ -755,7 +755,7 @@ function MatchMakingPage() {
               <button
                 type="button"
                 onClick={() => setShowEndModal(true)}
-                className="w-full btn-danger py-3.5 text-base font-bold shadow-[4px_4px_0px_#111827]"
+                className="w-full btn-danger py-3.5 text-base font-bold shadow-[4px_4px_0px_#192118]"
               >
                 <CheckIcon className="w-4 h-4" />
                 <span className="font-sketch text-lg">Akhiri Sesi & Simpan ke Riwayat</span>
@@ -768,17 +768,17 @@ function MatchMakingPage() {
       {/* ─── MODAL SCOREBOARD BESAR SKETCH ─── */}
       {activeModalMatch && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
-          <div className="bg-white rounded-3xl border-3 border-[#111827] shadow-[6px_6px_0px_#111827] w-full max-w-lg p-6 text-center space-y-6 animate-scale-up">
-            <div className="flex items-center justify-between border-b-2 border-[#111827] pb-3">
+          <div className="bg-white rounded-3xl border-3 border-[#192118] shadow-[6px_6px_0px_#192118] w-full max-w-lg p-6 text-center space-y-6 animate-scale-up">
+            <div className="flex items-center justify-between border-b-2 border-[#192118] pb-3">
               <div className="text-left">
-                <span className="text-xs font-mono font-bold text-[#0F766E] bg-[#E8F7F5] border border-[#111827] px-2.5 py-0.5 rounded-full shadow-[1px_1px_0px_#111827]">
+                <span className="text-xs font-mono font-bold text-[#274221] bg-[#E9EEE4] border border-[#192118] px-2.5 py-0.5 rounded-full shadow-[1px_1px_0px_#192118]">
                   Match #{activeModalMatch.match_number} • Lapangan {activeModalMatch.court_number}
                 </span>
-                <h3 className="text-base font-bold font-sketch text-[#111827] mt-1">Papan Skor Pertandingan</h3>
+                <h3 className="text-base font-bold font-sketch text-[#192118] mt-1">Papan Skor Pertandingan</h3>
               </div>
               <button
                 onClick={() => setActiveModalMatch(null)}
-                className="w-8 h-8 rounded-xl bg-white hover:bg-[#F4EDE0] text-[#111827] border-2 border-[#111827] shadow-[2px_2px_0px_#111827] flex items-center justify-center transition-all"
+                className="w-8 h-8 rounded-xl bg-white hover:bg-[#E9EEE4] text-[#192118] border-2 border-[#192118] shadow-[2px_2px_0px_#192118] flex items-center justify-center transition-all"
               >
                 <CloseIcon className="w-4 h-4" />
               </button>
@@ -787,15 +787,15 @@ function MatchMakingPage() {
             {/* Papan Skor Besar */}
             <div className="grid grid-cols-2 gap-4">
               {/* Tim A */}
-              <div className="bg-[#FAF6EE] border-2 border-[#111827] shadow-[3px_3px_0px_#111827] rounded-2xl p-4 flex flex-col justify-between overflow-hidden min-w-0">
+              <div className="bg-[#F7F8F5] border-2 border-[#192118] shadow-[3px_3px_0px_#192118] rounded-2xl p-4 flex flex-col justify-between overflow-hidden min-w-0">
                 <div className="overflow-hidden max-w-full">
                   <span className="text-[10px] font-mono text-slate-500 uppercase font-bold">Tim A</span>
-                  <p className="font-bold text-base text-[#111827] mt-1 truncate" title={activeModalMatch.team_a_name}>
+                  <p className="font-bold text-base text-[#192118] mt-1 truncate" title={activeModalMatch.team_a_name}>
                     {activeModalMatch.team_a_name}
                   </p>
                 </div>
                 <div className="my-6">
-                  <span className="text-6xl sm:text-7xl font-black font-mono text-[#111827]">
+                  <span className="text-6xl sm:text-7xl font-black font-mono text-[#192118]">
                     {activeModalMatch.score_a}
                   </span>
                 </div>
@@ -803,13 +803,13 @@ function MatchMakingPage() {
                   <button
                     onClick={() => updateScore(activeModalMatch.id, 'A', -1)}
                     disabled={activeModalMatch.score_a === 0}
-                    className="w-11 h-11 rounded-xl bg-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] font-bold text-base flex items-center justify-center disabled:opacity-30"
+                    className="w-11 h-11 rounded-xl bg-white border-2 border-[#192118] shadow-[2px_2px_0px_#192118] font-bold text-base flex items-center justify-center disabled:opacity-30"
                   >
                     <MinusIcon className="w-4 h-4" />
                   </button>
                   <button
                     onClick={() => updateScore(activeModalMatch.id, 'A', 1)}
-                    className="flex-1 h-11 rounded-xl bg-[#1DAD97] hover:bg-[#148B79] text-white font-black text-base border-2 border-[#111827] shadow-[2px_2px_0px_#111827] flex items-center justify-center"
+                    className="flex-1 h-11 rounded-xl bg-[#527D48] hover:bg-[#3D6135] text-white font-black text-base border-2 border-[#192118] shadow-[2px_2px_0px_#192118] flex items-center justify-center transition-all"
                   >
                     +1
                   </button>
@@ -817,15 +817,15 @@ function MatchMakingPage() {
               </div>
 
               {/* Tim B */}
-              <div className="bg-[#FAF6EE] border-2 border-[#111827] shadow-[3px_3px_0px_#111827] rounded-2xl p-4 flex flex-col justify-between overflow-hidden min-w-0">
+              <div className="bg-[#F7F8F5] border-2 border-[#192118] shadow-[3px_3px_0px_#192118] rounded-2xl p-4 flex flex-col justify-between overflow-hidden min-w-0">
                 <div className="overflow-hidden max-w-full">
                   <span className="text-[10px] font-mono text-slate-500 uppercase font-bold">Tim B</span>
-                  <p className="font-bold text-base text-[#111827] mt-1 truncate" title={activeModalMatch.team_b_name}>
+                  <p className="font-bold text-base text-[#192118] mt-1 truncate" title={activeModalMatch.team_b_name}>
                     {activeModalMatch.team_b_name}
                   </p>
                 </div>
                 <div className="my-6">
-                  <span className="text-6xl sm:text-7xl font-black font-mono text-[#111827]">
+                  <span className="text-6xl sm:text-7xl font-black font-mono text-[#192118]">
                     {activeModalMatch.score_b}
                   </span>
                 </div>
@@ -833,13 +833,13 @@ function MatchMakingPage() {
                   <button
                     onClick={() => updateScore(activeModalMatch.id, 'B', -1)}
                     disabled={activeModalMatch.score_b === 0}
-                    className="w-11 h-11 rounded-xl bg-white border-2 border-[#111827] shadow-[2px_2px_0px_#111827] font-bold text-base flex items-center justify-center disabled:opacity-30"
+                    className="w-11 h-11 rounded-xl bg-white border-2 border-[#192118] shadow-[2px_2px_0px_#192118] font-bold text-base flex items-center justify-center disabled:opacity-30"
                   >
                     <MinusIcon className="w-4 h-4" />
                   </button>
                   <button
                     onClick={() => updateScore(activeModalMatch.id, 'B', 1)}
-                    className="flex-1 h-11 rounded-xl bg-[#1DAD97] hover:bg-[#148B79] text-white font-black text-base border-2 border-[#111827] shadow-[2px_2px_0px_#111827] flex items-center justify-center"
+                    className="flex-1 h-11 rounded-xl bg-[#527D48] hover:bg-[#3D6135] text-white font-black text-base border-2 border-[#192118] shadow-[2px_2px_0px_#192118] flex items-center justify-center transition-all"
                   >
                     +1
                   </button>
@@ -850,7 +850,7 @@ function MatchMakingPage() {
             <div className="pt-2 flex gap-3">
               <button
                 onClick={() => toggleMatchStatus(activeModalMatch.id)}
-                className={`flex-1 py-3 rounded-full font-bold text-xs border-2 border-[#111827] shadow-[2px_2px_0px_#111827] ${
+                className={`flex-1 py-3 rounded-full font-bold text-xs border-2 border-[#192118] shadow-[2px_2px_0px_#192118] ${
                   activeModalMatch.status === 'finished'
                     ? 'bg-white text-slate-700'
                     : 'bg-[#16A34A] text-white'
@@ -872,9 +872,9 @@ function MatchMakingPage() {
       {/* ─── MODAL KONFIRMASI AKHIRI SESI ─── */}
       {showEndModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fade-in">
-          <div className="bg-white rounded-3xl border-3 border-[#111827] shadow-[6px_6px_0px_#111827] w-full max-w-md p-6 text-center space-y-4 animate-scale-up">
+          <div className="bg-white rounded-3xl border-3 border-[#192118] shadow-[6px_6px_0px_#192118] w-full max-w-md p-6 text-center space-y-4 animate-scale-up">
             <div>
-              <h3 className="text-xl font-bold font-sketch text-[#111827]">Akhiri Sesi Pertandingan?</h3>
+              <h3 className="text-xl font-bold font-sketch text-[#192118]">Akhiri Sesi Pertandingan?</h3>
               <p className="text-xs text-slate-600 mt-1 font-medium">
                 Seluruh data pertandingan sesi ini akan dikirim dan disimpan ke Riwayat Sesi.
               </p>
@@ -887,10 +887,10 @@ function MatchMakingPage() {
             )}
 
             {/* Ringkasan Sesi */}
-            <div className="bg-[#FAF6EE] border-2 border-[#111827] shadow-[2px_2px_0px_#111827] rounded-2xl p-4 text-left space-y-2 text-xs font-mono">
+            <div className="bg-[#F7F8F5] border-2 border-[#192118] shadow-[2px_2px_0px_#192118] rounded-2xl p-4 text-left space-y-2 text-xs font-mono">
               <div className="flex justify-between">
                 <span className="text-slate-500 uppercase font-bold">Nama Sesi:</span>
-                <span className="font-bold text-[#111827]">{sessionName}</span>
+                <span className="font-bold text-[#192118]">{sessionName}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500 uppercase font-bold">Durasi:</span>
@@ -898,11 +898,11 @@ function MatchMakingPage() {
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500 uppercase font-bold">Total Pemain:</span>
-                <span className="font-bold text-[#111827]">{allSessionPlayers.length} Orang</span>
+                <span className="font-bold text-[#192118]">{allSessionPlayers.length} Orang</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-slate-500 uppercase font-bold">Total Match:</span>
-                <span className="font-bold text-[#0F766E]">{matches.length} Pertandingan</span>
+                <span className="font-bold text-[#274221]">{matches.length} Pertandingan</span>
               </div>
             </div>
 
@@ -919,7 +919,7 @@ function MatchMakingPage() {
                 type="button"
                 onClick={handleConfirmEndSession}
                 disabled={isSubmitting}
-                className="btn-danger py-2.5 text-xs font-bold shadow-[2px_2px_0px_#111827]"
+                className="btn-danger py-2.5 text-xs font-bold shadow-[2px_2px_0px_#192118]"
               >
                 {isSubmitting ? 'Menyimpan...' : 'Simpan & Selesai'}
               </button>

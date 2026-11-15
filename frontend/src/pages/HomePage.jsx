@@ -1,4 +1,4 @@
-// Halaman Utama - Sketch Design System
+// Halaman Utama - Sketch Design System (Matcha Olive Edition)
 import React from 'react';
 import useApi from '../hooks/useApi.js';
 import UkmCard from '../components/UkmCard.jsx';
@@ -10,16 +10,16 @@ function HomePage() {
 
   return (
     <div className="min-h-screen pb-16">
-      {/* Header Sketch */}
-      <div className="bg-[#FAF6EE] border-b-2 border-[#111827] shadow-[0_2px_0px_rgba(17,24,39,0.05)] px-4 pt-10 pb-6 md:pt-8">
+      {/* Header Sketch Matcha Olive */}
+      <div className="bg-[#F7F8F5] border-b-2 border-[#192118] shadow-[0_2px_0px_rgba(25,33,24,0.05)] px-4 pt-10 pb-6 md:pt-8">
         <div className="max-w-4xl mx-auto">
           {/* Logo dan Judul */}
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 bg-[#1DAD97] border-2 border-[#111827] shadow-[3px_3px_0px_#111827] rounded-xl flex items-center justify-center md:hidden text-white font-bold text-xl font-sketch leading-none">
+            <div className="w-10 h-10 bg-[#527D48] border-2 border-[#192118] shadow-[3px_3px_0px_#192118] rounded-xl flex items-center justify-center md:hidden text-white font-bold text-xl font-sketch leading-none">
               U
             </div>
             <div>
-              <h1 className="text-2xl font-bold font-sketch text-[#111827] tracking-wide">
+              <h1 className="text-2xl font-bold font-sketch text-[#192118] tracking-wide">
                 UKM Teknik Komputer
               </h1>
               <p className="text-xs font-mono font-semibold text-slate-600">
@@ -29,10 +29,10 @@ function HomePage() {
           </div>
 
           {/* Banner Informasi Cepat & Komunitas WhatsApp */}
-          <div className="mt-4 bg-[#F4EDE0] rounded-2xl p-4 border-2 border-dashed border-[#111827] shadow-[3px_3px_0px_#111827] flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div className="mt-4 bg-[#E9EEE4] rounded-2xl p-4 border-2 border-dashed border-[#192118] shadow-[3px_3px_0px_#192118] flex flex-col md:flex-row md:items-center justify-between gap-3">
             <div className="min-w-0 flex-1">
-              <p className="text-xs font-bold text-[#111827] flex items-center gap-1.5">
-                <ShuttlecockIcon className="w-4 h-4 text-[#1DAD97]" />
+              <p className="text-xs font-bold text-[#192118] flex items-center gap-1.5">
+                <ShuttlecockIcon className="w-4 h-4 text-[#527D48]" />
                 <span>Pusat Aktivitas UKM & Papan Skor Digital</span>
               </p>
               <p className="text-xs text-slate-600 mt-0.5 font-medium">
@@ -44,7 +44,7 @@ function HomePage() {
                 href="https://chat.whatsapp.com/IQytd9YroCH4g463f2hLoH"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold text-xs py-2 px-3.5 rounded-full border-2 border-[#111827] shadow-[2px_2px_0px_#111827] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] transition-all"
+                className="inline-flex items-center justify-center gap-1.5 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold text-xs py-2 px-3.5 rounded-full border-2 border-[#192118] shadow-[2px_2px_0px_#192118] hover:translate-x-[1px] hover:translate-y-[1px] active:translate-x-[2px] active:translate-y-[2px] transition-all"
               >
                 <WhatsAppIcon className="w-3.5 h-3.5" />
                 <span>Komunitas WhatsApp</span>
@@ -67,11 +67,11 @@ function HomePage() {
         {/* Label Seksi */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <h2 className="text-xl font-bold font-sketch text-[#111827]">
+            <h2 className="text-xl font-bold font-sketch text-[#192118]">
               Daftar UKM
             </h2>
             {ukms && (
-              <span className="font-mono text-xs font-bold bg-[#E8F7F5] text-[#0F766E] border border-[#111827] px-2 py-0.2 rounded-full shadow-[1px_1px_0px_#111827]">
+              <span className="font-mono text-xs font-bold bg-[#E9EEE4] text-[#274221] border border-[#192118] px-2 py-0.2 rounded-full shadow-[1px_1px_0px_#192118]">
                 {ukms.length} UKM
               </span>
             )}
@@ -80,7 +80,7 @@ function HomePage() {
           {!loading && (
             <button
               onClick={refetch}
-              className="text-xs font-bold text-[#1DAD97] hover:underline flex items-center gap-1.5 transition-colors"
+              className="text-xs font-bold text-[#527D48] hover:text-[#3D6135] flex items-center gap-1.5 transition-colors"
             >
               <RefreshIcon className="w-3.5 h-3.5" />
               <span>Perbarui Data</span>

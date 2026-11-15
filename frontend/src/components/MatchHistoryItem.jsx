@@ -1,4 +1,4 @@
-// Komponen item riwayat pertandingan reguler - Sketch Design System
+// Komponen item riwayat pertandingan reguler - Sketch Design System (Matcha Olive Edition)
 import React from 'react';
 import SportBadge from './SportBadge.jsx';
 import { ArrowRightIcon, TrophyIcon } from './Icons.jsx';
@@ -26,7 +26,7 @@ function MatchHistoryItem({ match }) {
   });
 
   return (
-    <div className="card hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_#111827] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all duration-150 group bg-white overflow-hidden">
+    <div className="card hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_#192118] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all duration-150 group bg-white overflow-hidden">
       {/* Header: badge olahraga + tanggal */}
       <div className="flex items-center justify-between mb-3 gap-2">
         <SportBadge sport={sport_type} />
@@ -39,32 +39,32 @@ function MatchHistoryItem({ match }) {
         <div
           className={`flex items-center justify-between gap-3 p-2.5 rounded-xl border-2 transition-colors ${
             teamAWon
-              ? 'bg-[#E8F7F5] border-[#111827]'
-              : 'bg-[#FAF6EE] border-[#111827]/40'
+              ? 'bg-[#E9EEE4] border-[#192118]'
+              : 'bg-[#F7F8F5] border-[#192118]/40'
           }`}
         >
           <div className="flex items-center gap-2 min-w-0 flex-1">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 bg-white/80 border border-[#111827]/30 px-1.5 py-0.2 rounded shrink-0">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 bg-white/80 border border-[#192118]/30 px-1.5 py-0.2 rounded shrink-0">
               Tim A
             </span>
             <p
               className={`font-bold text-xs sm:text-sm truncate ${
-                teamAWon ? 'text-[#0F766E]' : 'text-[#111827]'
+                teamAWon ? 'text-[#274221]' : 'text-[#192118]'
               }`}
               title={team_a_name}
             >
               {team_a_name}
             </p>
             {teamAWon && (
-              <span className="inline-flex items-center gap-1 text-[10px] bg-white text-[#0F766E] font-bold px-2 py-0.2 rounded-full border border-[#111827] shadow-[1px_1px_0px_#111827] shrink-0">
-                <TrophyIcon className="w-2.5 h-2.5 text-[#1DAD97]" />
+              <span className="inline-flex items-center gap-1 text-[10px] bg-[#E9EEE4] text-[#274221] font-bold px-2 py-0.2 rounded-full border border-[#192118] shadow-[1px_1px_0px_#192118] shrink-0">
+                <TrophyIcon className="w-2.5 h-2.5 text-[#274221]" />
                 <span>Menang</span>
               </span>
             )}
           </div>
           <span
-            className={`font-mono text-base sm:text-lg font-black px-2.5 py-0.5 rounded-lg border-2 border-[#111827] bg-white shadow-[1px_1px_0px_#111827] shrink-0 ${
-              teamAWon ? 'text-[#1DAD97]' : 'text-[#111827]'
+            className={`font-mono text-base sm:text-lg font-black px-2.5 py-0.5 rounded-lg border-2 border-[#192118] bg-white shadow-[1px_1px_0px_#192118] shrink-0 ${
+              teamAWon ? 'text-[#527D48]' : 'text-[#192118]'
             }`}
           >
             {score_a}
@@ -75,32 +75,32 @@ function MatchHistoryItem({ match }) {
         <div
           className={`flex items-center justify-between gap-3 p-2.5 rounded-xl border-2 transition-colors ${
             teamBWon
-              ? 'bg-[#E8F7F5] border-[#111827]'
-              : 'bg-[#FAF6EE] border-[#111827]/40'
+              ? 'bg-[#E9EEE4] border-[#192118]'
+              : 'bg-[#F7F8F5] border-[#192118]/40'
           }`}
         >
           <div className="flex items-center gap-2 min-w-0 flex-1">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 bg-white/80 border border-[#111827]/30 px-1.5 py-0.2 rounded shrink-0">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 bg-white/80 border border-[#192118]/30 px-1.5 py-0.2 rounded shrink-0">
               Tim B
             </span>
             <p
               className={`font-bold text-xs sm:text-sm truncate ${
-                teamBWon ? 'text-[#0F766E]' : 'text-[#111827]'
+                teamBWon ? 'text-[#274221]' : 'text-[#192118]'
               }`}
               title={team_b_name}
             >
               {team_b_name}
             </p>
             {teamBWon && (
-              <span className="inline-flex items-center gap-1 text-[10px] bg-white text-[#0F766E] font-bold px-2 py-0.2 rounded-full border border-[#111827] shadow-[1px_1px_0px_#111827] shrink-0">
-                <TrophyIcon className="w-2.5 h-2.5 text-[#1DAD97]" />
+              <span className="inline-flex items-center gap-1 text-[10px] bg-[#E9EEE4] text-[#274221] font-bold px-2 py-0.2 rounded-full border border-[#192118] shadow-[1px_1px_0px_#192118] shrink-0">
+                <TrophyIcon className="w-2.5 h-2.5 text-[#274221]" />
                 <span>Menang</span>
               </span>
             )}
           </div>
           <span
-            className={`font-mono text-base sm:text-lg font-black px-2.5 py-0.5 rounded-lg border-2 border-[#111827] bg-white shadow-[1px_1px_0px_#111827] shrink-0 ${
-              teamBWon ? 'text-[#1DAD97]' : 'text-[#111827]'
+            className={`font-mono text-base sm:text-lg font-black px-2.5 py-0.5 rounded-lg border-2 border-[#192118] bg-white shadow-[1px_1px_0px_#192118] shrink-0 ${
+              teamBWon ? 'text-[#527D48]' : 'text-[#192118]'
             }`}
           >
             {score_b}
@@ -109,20 +109,20 @@ function MatchHistoryItem({ match }) {
       </div>
 
       {/* Footer Info / Indikator Hasil */}
-      <div className="mt-2.5 pt-2 border-t-2 border-dashed border-[#F4EDE0] flex items-center justify-between text-xs">
+      <div className="mt-2.5 pt-2 border-t-2 border-dashed border-[#E9EEE4] flex items-center justify-between text-xs">
         {isDraw ? (
-          <span className="text-[10px] font-bold font-mono text-slate-600 bg-[#F4EDE0] border border-[#111827] px-2 py-0.5 rounded-full">
+          <span className="text-[10px] font-bold font-mono text-slate-600 bg-[#E9EEE4] border border-[#192118] px-2 py-0.5 rounded-full">
             Hasil Imbang (Seri)
           </span>
         ) : (
           <span className="text-[11px] font-mono text-slate-500 font-semibold truncate mr-2">
             Pemenang:{' '}
-            <strong className="text-[#1DAD97] font-bold">
+            <strong className="text-[#527D48] font-bold">
               {teamAWon ? team_a_name : team_b_name}
             </strong>
           </span>
         )}
-        <span className="text-xs font-bold text-[#1DAD97] inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform shrink-0 ml-auto">
+        <span className="text-xs font-bold text-[#527D48] inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform shrink-0 ml-auto">
           <span>Detail</span>
           <ArrowRightIcon className="w-3.5 h-3.5" />
         </span>

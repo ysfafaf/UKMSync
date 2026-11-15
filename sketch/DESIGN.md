@@ -1,13 +1,22 @@
 ---
-name: Sketch
+name: Sketch (Matcha Olive Edition)
 colors:
-  primary: "#1DAD97"
-  secondary: "#F4EDE0"
+  primary: "#527D48"
+  primaryDark: "#3D6135"
+  secondary: "#E9EEE4"
+  accent: "#527D48"
+  accentDark: "#3D6135"
+  accentLight: "#E9EEE4"
+  accentDeep: "#274221"
+  baseOlive: "#527D48"
+  baseOliveDark: "#3D6135"
+  paper: "#F7F8F5"
+  charcoal: "#192118"
   success: "#16A34A"
   warning: "#D97706"
   danger: "#DC2626"
   surface: "#FFFFFF"
-  text: "#111827"
+  text: "#192118"
   neutral: "#FFFFFF"
 typography:
   h1:
@@ -24,6 +33,8 @@ typography:
 rounded:
   sm: 4px
   md: 8px
+  xl: 16px
+  "2xl": 24px
 spacing:
   sm: 4px
   md: 8px
@@ -32,24 +43,30 @@ spacing:
 
 ## Overview
 
-Hand-drawn sketch aesthetic on warm paper with soft teal accents, dashed outlines, and tactile illustrated shadows.
+Hand-drawn sketch aesthetic on soft alabaster rice paper (`#F7F8F5`) with calming Nordic matcha olive primary branding (`#527D48`), deep pine olive hover (`#3D6135`), light matcha card structures (`#E9EEE4`), deep olive black ink contours & shadows (`#192118`), dashed outlines, and tactile illustrated offset shadows. Zero emojis; 100% vector SVG icons.
 
 ## Style Foundations
 
-- **Visual style:** modern, clean, high-contrast
+- **Visual style:** modern, athletic, artisanal, high-contrast tactile sketch with serene Nordic matcha green
 - **Typography scale:** 12/14/16/20/24/32
 - **Typography fonts:** primary=Delicious Handrawn, display=Delicious Handrawn, mono=JetBrains Mono
 - **Typography weights:** 100, 200, 300, 400, 500, 600, 700, 800, 900
-- **Color palette:** primary, secondary, neutral, success, warning, danger
+- **Color balance:** 60% Alabaster Canvas (`#F7F8F5`), 30% Matcha & Card Structure (`#E9EEE4`), 10% Primary Olive Actions (`#527D48`)
 - **Spacing scale:** 4/8/12/16/24/32
 
-## Colors
+## Token Color Mapping
 
-- **Primary (#1DAD97):** Token from style foundations.
-- **Secondary (#F4EDE0):** Token from style foundations.
-- **Success (#16A34A):** Token from style foundations.
-- **Warning (#D97706):** Token from style foundations.
-- **Danger (#DC2626):** Token from style foundations.
-- **Surface (#FFFFFF):** Token from style foundations.
-- **Text (#111827):** Token from style foundations.
-- **Neutral (#FFFFFF):** Derived from the surface token for official format compatibility.
+- **Canvas / Paper (`#F7F8F5`):** 60% Soft alabaster rice paper canvas background.
+- **Card Muted / Secondary (`#E9EEE4`):** 30% Card backgrounds, subtle pills, table headers.
+- **Sub-Border & Tint (`#D6E0CF`):** Selected chips, hover states, sub-borders.
+- **Primary Action (CTA Buttons) (`#527D48`):** 10% Matcha Olive Green for all primary buttons, active bottom nav items, active tab indicators, header icons, and live pulse dots.
+- **Primary Hover (`#3D6135`):** Deep Pine Olive for button hover and active states.
+- **Ink Charcoal (`#192118`):** 2px/3px olive black ink outlines, drop shadows (`shadow-[3px_3px_0px_#192118]`), headings, body text.
+
+## Unified Multi-Sport Badges (No Clashing Tones)
+
+All 4 sport badges strictly follow the Sketch earth & parchment palette:
+- **Badminton:** `bg-[#E9EEE4] text-[#274221] border-[#192118]` (Matcha / Sage)
+- **Basket:** `bg-[#FEF3C7] text-[#78350F] border-[#192118]` (Warm Parchment Amber)
+- **Voli:** `bg-[#D6E0CF] text-[#274221] border-[#192118]` (Olive Khaki)
+- **Futsal:** `bg-[#F7F8F5] text-[#192118] border-[#192118]` (Alabaster Paper & Charcoal)
