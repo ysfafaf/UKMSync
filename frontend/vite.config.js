@@ -22,12 +22,12 @@ export default defineConfig({
           {
             src: '/icons/iconapp.jpg',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/jpeg',
           },
           {
             src: '/icons/iconapp.jpg',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/jpeg',
           },
         ],
       },
