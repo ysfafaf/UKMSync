@@ -20,12 +20,12 @@ export default defineConfig({
         scope: '/',
         icons: [
           {
-            src: '/icons/icon-192.png',
+            src: '/icons/iconapp.jpg',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/icons/icon-512.png',
+            src: '/icons/iconapp.jpg',
             sizes: '512x512',
             type: 'image/png',
           },
