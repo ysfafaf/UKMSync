@@ -14,8 +14,12 @@ const PORT = process.env.PORT || 5001;
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 
-// Allow all origins (suitable for development; tighten for production)
-app.use(cors());
+// Allow all origins (suitable for development and cross-domain Vercel deployment)
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
 // Parse incoming JSON request bodies
 app.use(express.json());
@@ -49,12 +53,18 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Something went wrong' });
 });
 
-// ─── Start Server ─────────────────────────────────────────────────────────────
+// ─── Export & Start Server ───────────────────────────────────────────────────
 
-app.listen(PORT, () => {
-  console.log(`🚀 UKMSync API is running on http://localhost:${PORT}`);
-  console.log(`   Health check: http://localhost:${PORT}/`);
-  console.log(`   UKMs:         http://localhost:${PORT}/api/ukms`);
-  console.log(`   Matches:      http://localhost:${PORT}/api/matches`);
-  console.log(`   Sessions:     http://localhost:${PORT}/api/sessions`);
-});
+// Export app for Vercel Serverless Functions
+module.exports = app;
+
+// Listen locally if not running as a Vercel Serverless Function
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 UKMSync API is running on http://localhost:${PORT}`);
+    console.log(`   Health check: http://localhost:${PORT}/`);
+    console.log(`   UKMs:         http://localhost:${PORT}/api/ukms`);
+    console.log(`   Matches:      http://localhost:${PORT}/api/matches`);
+    console.log(`   Sessions:     http://localhost:${PORT}/api/sessions`);
+  });
+}
