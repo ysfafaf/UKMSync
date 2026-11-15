@@ -1,0 +1,128 @@
+/* Direktif Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sketch Design System: Hand-drawn pencil aesthetic on warm paper with soft teal accents */
+@layer base {
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #FAF6EE;
+    color: #111827;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .app-container {
+    @apply min-h-screen pb-20 md:pb-0 md:pl-64;
+  }
+
+  /* Card Sketch: Pencil border & tactile offset shadow */
+  .card {
+    @apply bg-white rounded-2xl border-2 border-[#111827] shadow-[3px_3px_0px_#111827] p-4 sm:p-5 transition-all;
+  }
+
+  .card-dashed {
+    @apply bg-white rounded-2xl border-2 border-dashed border-[#111827] shadow-[3px_3px_0px_#111827] p-4 sm:p-5 transition-all;
+  }
+
+  /* Tombol Primer: Soft Teal #1DAD97 with pencil stroke & tactile shadow */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-[#1DAD97] text-white font-bold text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5 rounded-full
+           border-2 border-[#111827] shadow-[3px_3px_0px_#111827]
+           hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_#111827]
+           active:translate-x-[3px] active:translate-y-[3px] active:shadow-none
+           transition-all duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[3px_3px_0px_#111827];
+  }
+
+  /* Tombol Sekunder: Warm paper white with pencil stroke */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white text-[#111827] font-bold text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5 rounded-full
+           border-2 border-[#111827] shadow-[2px_2px_0px_#111827]
+           hover:bg-[#F4EDE0] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_#111827]
+           active:translate-x-[2px] active:translate-y-[2px] active:shadow-none
+           transition-all duration-150;
+  }
+
+  /* Tombol Danger */
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2
+           bg-[#DC2626] text-white font-bold text-xs sm:text-sm py-2 px-4 sm:py-2.5 sm:px-5 rounded-full
+           border-2 border-[#111827] shadow-[3px_3px_0px_#111827]
+           hover:bg-rose-700 hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_#111827]
+           active:translate-x-[3px] active:translate-y-[3px] active:shadow-none
+           transition-all duration-150;
+  }
+
+  /* Input Field Sketch: High contrast with pencil stroke & tactile shadow */
+  .input-field {
+    @apply w-full bg-white border-2 border-[#111827] rounded-xl px-3.5 py-2.5 text-sm text-[#111827]
+           shadow-[2px_2px_0px_#111827] placeholder:text-slate-400
+           focus:outline-none focus:ring-2 focus:ring-[#1DAD97] focus:border-[#111827]
+           transition-all;
+  }
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  .animate-scale-up {
+    animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF6EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #111827;
+  border-radius: 999px;
+}
