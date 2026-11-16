@@ -15,8 +15,8 @@ function HomePage() {
         <div className="max-w-4xl mx-auto">
           {/* Logo dan Judul */}
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 bg-[#527D48] border-2 border-[#192118] shadow-[3px_3px_0px_#192118] rounded-xl flex items-center justify-center md:hidden text-white font-bold text-xl font-sketch leading-none">
-              U
+            <div className="w-11 h-11 bg-white border-2 border-[#192118] shadow-[3px_3px_0px_#192118] rounded-xl overflow-hidden flex items-center justify-center shrink-0">
+              <img src="/icons/iconapp.jpg" alt="UKMSync Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="text-2xl font-bold font-sketch text-[#192118] tracking-wide">

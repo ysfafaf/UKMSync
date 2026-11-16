@@ -63,8 +63,8 @@ function BottomNav() {
         {/* Logo Sidebar */}
         <div className="mb-8 px-2">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#527D48] text-white border-2 border-[#192118] shadow-[3px_3px_0px_#192118] rounded-xl flex items-center justify-center">
-              <span className="text-white text-xl font-black font-sketch leading-none">U</span>
+            <div className="w-10 h-10 bg-white border-2 border-[#192118] shadow-[3px_3px_0px_#192118] rounded-xl overflow-hidden flex items-center justify-center shrink-0">
+              <img src="/icons/iconapp.jpg" alt="UKMSync Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="font-sketch font-bold text-2xl text-[#192118] leading-none tracking-wide">

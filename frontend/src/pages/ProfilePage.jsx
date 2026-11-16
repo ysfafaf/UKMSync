@@ -76,9 +76,9 @@ function ProfilePage() {
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-4">
         {/* ─── BAGIAN HEADER APLIKASI (TOP SECTION) ─── */}
         <div className="card text-center py-7 bg-white">
-          {/* Ikon / Logo Minimalis Bertema Olahraga & Manajemen */}
-          <div className="w-16 h-16 bg-[#527D48] text-white rounded-2xl border-2 border-[#192118] shadow-[3px_3px_0px_#192118] flex items-center justify-center mx-auto mb-3">
-            <ShuttlecockIcon className="w-8 h-8 text-white stroke-[2]" />
+          {/* Ikon / Logo Aplikasi */}
+          <div className="w-20 h-20 bg-white rounded-2xl border-2 border-[#192118] shadow-[3px_3px_0px_#192118] overflow-hidden flex items-center justify-center mx-auto mb-3">
+            <img src="/icons/iconapp.jpg" alt="UKMSync Logo" className="w-full h-full object-cover" />
           </div>
 
           <h2 className="text-3xl font-bold font-sketch text-[#192118] tracking-wide">
@@ -161,9 +161,8 @@ function ProfilePage() {
                   {item.label}
                 </span>
                 <span
-                  className={`text-xs font-bold text-[#192118] sm:text-right ${
-                    item.mono ? 'font-mono' : ''
-                  }`}
+                  className={`text-xs font-bold text-[#192118] sm:text-right ${item.mono ? 'font-mono' : ''
+                    }`}
                 >
                   {item.value}
                 </span>

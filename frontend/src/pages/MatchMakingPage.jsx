@@ -751,16 +751,6 @@ function MatchMakingPage() {
             </div>
 
             {/* Tombol Akhiri Sesi Bawah */}
-            <div className="pt-4">
-              <button
-                type="button"
-                onClick={() => setShowEndModal(true)}
-                className="w-full btn-danger py-3.5 text-base font-bold shadow-[4px_4px_0px_#192118]"
-              >
-                <CheckIcon className="w-4 h-4" />
-                <span className="font-sketch text-lg">Akhiri Sesi & Simpan ke Riwayat</span>
-              </button>
-            </div>
           </div>
         </div>
       )}
